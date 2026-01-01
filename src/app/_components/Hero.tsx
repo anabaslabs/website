@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import PixelBlast from "@/components/PixelBlast";
-import Icon from "@/assets/icon.svg";
+import { ShinyButton } from "@/components/ui/shiny-button";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 export default function Hero() {
   return (
@@ -29,20 +29,21 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <Image
-          src={Icon}
-          alt="Anabas Labs"
-          width={150}
-          height={150}
-          className="mx-auto mb-5"
-        />
-        <h1 className="font-fredoka font-semibold text-3xl md:text-5xl  text-primary mb-6">
-          Anabas Labs
+      <div className="relative text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <h1 className="font-lexend text-3xl md:text-5xl mb-6 text-foreground font-semibold">
+          Turning real problems into scalable software.
         </h1>
-        <h2 className="font-lexend opacity-75 text-2xl md:text-3xl text-foreground mb-8">
-          Coming Soon...
+        <h2 className="font-lora text-2xl md:text-3xl mb-8 text-muted-foreground font-semibold">
+          Built publicly, Shipped properly.
         </h2>
+        <div className="flex justify-center items-center mx-auto gap-14">
+          <ShinyButton className="bg-secondary hover:bg-accent py-2.5 rounded-full">
+            Learn More
+          </ShinyButton>
+          <InteractiveHoverButton className="bg-secondary">
+            Get in touch
+          </InteractiveHoverButton>
+        </div>
       </div>
     </section>
   );
