@@ -1,4 +1,6 @@
+import NavBar from "@/components/NavBar";
 import TailwindIndicator from "@/components/TwIndicator";
+
 import type { Metadata } from "next";
 import { Fredoka, Lexend, Lora } from "next/font/google";
 import "./globals.css";
@@ -37,6 +39,7 @@ export default function RootLayout({
       <body
         className={`${fredoka.variable} ${lexend.variable} ${lora.variable} antialiased`}
       >
+        <NavBar />
         {children}
         <TailwindIndicator />
       </body>
