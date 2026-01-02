@@ -5,7 +5,7 @@ import { Highlighter } from "../../components/ui/highlighter";
 
 export default function About_Text() {
   return (
-    <div className="min-h-screen w-full font-lexend text-[32px] flex flex-col justify-center items-center bg-gradient-to-b from-transparent to-muted/10">
+    <div className="min-h-screen w-full font-lexend text-[32px] flex flex-col justify-start items-center bg-gradient-to-b from-transparent to-muted/10">
       <div className="p-12">
         <div className="text-lg leading-relaxed">
           <ScrollReveal
