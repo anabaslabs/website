@@ -43,7 +43,7 @@ const imageLogos = [
 
 export default function TechStack() {
   return (
-    <div className="h-[70px] relative overflow-hidden w-full bg-gradient-to-r from-muted/50 via-background to-muted/50 flex  justify-center items-center">
+    <div className="h-[70px] relative overflow-hidden w-full  from-muted/50 via-background to-muted/50 flex  justify-center items-center">
       <LogoLoop
         logos={techLogos}
         speed={100}
