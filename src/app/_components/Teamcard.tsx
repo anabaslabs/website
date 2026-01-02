@@ -5,11 +5,11 @@ import React from "react";
 
 function Teamcard() {
   return (
-    <div className="grid grid-cols-5 justify-start items-start w-full p-8">
+    <div className="flex flex-wrap  gap-14 justify-center items-start w-full ">
       <CometCard>
         <button
           type="button"
-          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 md:my-20 md:p-4"
+          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-primary p-2  "
           aria-label="View invite F7RA"
           style={{
             transformStyle: "preserve-3d",
@@ -23,7 +23,7 @@ function Teamcard() {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full rounded-[16px]  object-cover contrast-75"
                 alt="Invite background"
-                src="https://scontent.cdninstagram.com/v/t51.75761-15/481276282_18048056009517793_5251644514379642047_n.webp?_nc_cat=108&ig_cache_key=MzU3Mzc0NTgzMTkzMTAyMDg4OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=aFujAVuNKV0Q7kNvwFpIVE-&_nc_oc=Adk_qWHCf55tfpbeC1zOEzA9OjV5JDeSCixppLQ5sbSeFKVeW87XK1RA0eJ1WPMw-kyy_8jrvwzx1TayxPrdeFdo&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=C9KWtYV8J0ne513nF9EhWg&oh=00_AfoCBB4kWdmSduV14e1yA94nidIzoIQyxI48VDeOiTybQQ&oe=695DBE4B"
+                src="https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg"
                 style={{
                   opacity: 5,
                 }}
@@ -31,15 +31,17 @@ function Teamcard() {
             </div>
           </div>
           <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
-            <div className="text-xs">Comet Invitation</div>
-            <div className="text-xs text-gray-300 opacity-50">#F7RA</div>
+            <div className="text-xs">Aayushman Bharadwaj</div>
+            <div className="text-xs text-gray-300 opacity-50">
+              Frontend Developer
+            </div>
           </div>
         </button>
       </CometCard>
       <CometCard>
         <button
           type="button"
-          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 md:my-20 md:p-4"
+          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-primary p-2  "
           aria-label="View invite F7RA"
           style={{
             transformStyle: "preserve-3d",
@@ -53,7 +55,7 @@ function Teamcard() {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full rounded-[16px] bg-[#000000] object-cover contrast-75"
                 alt="Invite background"
-                src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg"
                 style={{
                   boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
                   opacity: 1,
@@ -62,15 +64,17 @@ function Teamcard() {
             </div>
           </div>
           <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
-            <div className="text-xs">Comet Invitation</div>
-            <div className="text-xs text-gray-300 opacity-50">#F7RA</div>
+            <div className="text-xs">Krishnendu Das</div>
+            <div className="text-xs text-gray-300 opacity-50">
+              DevOps | Fullstack{" "}
+            </div>
           </div>
         </button>
       </CometCard>
       <CometCard>
         <button
           type="button"
-          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 md:my-20 md:p-4"
+          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-primary p-2 "
           aria-label="View invite F7RA"
           style={{
             transformStyle: "preserve-3d",
@@ -84,7 +88,7 @@ function Teamcard() {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full rounded-[16px] bg-[#000000] object-cover contrast-75"
                 alt="Invite background"
-                src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg"
                 style={{
                   boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
                   opacity: 1,
@@ -93,15 +97,17 @@ function Teamcard() {
             </div>
           </div>
           <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
-            <div className="text-xs">Comet Invitation</div>
-            <div className="text-xs text-gray-300 opacity-50">#F7RA</div>
+            <div className="text-xs">Saptarshi Roy</div>
+            <div className="text-xs text-gray-300 opacity-50">
+              Agentic Developer
+            </div>
           </div>
         </button>
       </CometCard>
       <CometCard>
         <button
           type="button"
-          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 md:my-20 md:p-4"
+          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-primary p-2 "
           aria-label="View invite F7RA"
           style={{
             transformStyle: "preserve-3d",
@@ -115,7 +121,7 @@ function Teamcard() {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full rounded-[16px] bg-[#000000] object-cover contrast-75"
                 alt="Invite background"
-                src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg"
                 style={{
                   boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
                   opacity: 1,
@@ -124,15 +130,17 @@ function Teamcard() {
             </div>
           </div>
           <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
-            <div className="text-xs">Comet Invitation</div>
-            <div className="text-xs text-gray-300 opacity-50">#F7RA</div>
+            <div className="text-xs">Ankit Nayek</div>
+            <div className="text-xs text-gray-300 opacity-50">
+              Fullstack Developer
+            </div>
           </div>
         </button>
       </CometCard>
       <CometCard>
         <button
           type="button"
-          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 saturate-0 md:my-20 md:p-4"
+          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-primary p-2  "
           aria-label="View invite F7RA"
           style={{
             transformStyle: "preserve-3d",
@@ -146,7 +154,7 @@ function Teamcard() {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full rounded-[16px] bg-[#000000] object-cover contrast-75"
                 alt="Invite background"
-                src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg"
                 style={{
                   boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
                   opacity: 1,
@@ -155,8 +163,10 @@ function Teamcard() {
             </div>
           </div>
           <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
-            <div className="text-xs">Comet Invitation</div>
-            <div className="text-xs text-gray-300 opacity-50">#F7RA</div>
+            <div className="text-xs">Tuhin Pramanik</div>
+            <div className="text-xs text-gray-300 opacity-50">
+              FullStack | Agents
+            </div>
           </div>
         </button>
       </CometCard>

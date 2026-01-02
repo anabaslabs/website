@@ -10,27 +10,27 @@ export default function About_Text() {
         <div className="text-lg leading-relaxed">
           <ScrollReveal
             baseOpacity={0}
-            enableBlur={true}
-            baseRotation={5}
-            blurStrength={10}
+            enableBlur={false}
+            baseRotation={0}
+            blurStrength={0}
           >
             AnabasLabs is a
           </ScrollReveal>{" "}
           <Highlighter action="underline" color="#ec4e0c">
             <ScrollReveal
               baseOpacity={0}
-              enableBlur={true}
-              baseRotation={5}
-              blurStrength={10}
+              enableBlur={false}
+              baseRotation={0}
+              blurStrength={0}
             >
               software engineering studio
             </ScrollReveal>{" "}
           </Highlighter>
           <ScrollReveal
             baseOpacity={0.2}
-            enableBlur={true}
-            baseRotation={5}
-            blurStrength={10}
+            enableBlur={false}
+            baseRotation={0}
+            blurStrength={0}
           >
             , focused on building scalable, real-world systems for startups and
             businesses. We design and deploy
@@ -38,54 +38,54 @@ export default function About_Text() {
           <Highlighter action="highlight" color="#ffd1dc">
             <ScrollReveal
               baseOpacity={0.2}
-              enableBlur={true}
-              baseRotation={5}
-              blurStrength={10}
+              enableBlur={false}
+              baseRotation={0}
+              blurStrength={0}
             >
               web platforms
             </ScrollReveal>
           </Highlighter>
           <ScrollReveal
             baseOpacity={0.2}
-            enableBlur={true}
-            baseRotation={5}
-            blurStrength={10}
+            enableBlur={false}
+            baseRotation={0}
+            blurStrength={0}
           >
             ,
           </ScrollReveal>{" "}
           <Highlighter action="highlight" color="#f1d7a6ff">
             <ScrollReveal
               baseOpacity={0.2}
-              enableBlur={true}
-              baseRotation={5}
-              blurStrength={10}
+              enableBlur={false}
+              baseRotation={0}
+              blurStrength={0}
             >
               mobile applications
             </ScrollReveal>
           </Highlighter>
           <ScrollReveal
             baseOpacity={0.2}
-            enableBlur={true}
-            baseRotation={5}
-            blurStrength={10}
+            enableBlur={false}
+            baseRotation={0}
+            blurStrength={0}
           >
             , and
           </ScrollReveal>{" "}
           <Highlighter action="highlight" color="#8eeeabff">
             <ScrollReveal
               baseOpacity={0.2}
-              enableBlur={true}
-              baseRotation={5}
-              blurStrength={10}
+              enableBlur={false}
+              baseRotation={0}
+              blurStrength={0}
             >
               AI-driven automation
             </ScrollReveal>
           </Highlighter>{" "}
           <ScrollReveal
             baseOpacity={0.2}
-            enableBlur={true}
-            baseRotation={5}
-            blurStrength={10}
+            enableBlur={false}
+            baseRotation={0}
+            blurStrength={0}
           >
             that are reliable, maintainable, and ready for real users. Our work
             begins with understanding the problem deeply. We study existing
