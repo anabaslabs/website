@@ -43,8 +43,7 @@ const imageLogos = [
 
 export default function TechStack() {
   return (
-    <div className="h-[70px] relative overflow-hidden">
-      {/* Basic horizontal loop */}
+    <div className="h-[70px] relative overflow-hidden w-full bg-gradient-to-r from-muted/50 via-background to-muted/50 flex  justify-center items-center">
       <LogoLoop
         logos={techLogos}
         speed={100}
@@ -56,17 +55,6 @@ export default function TechStack() {
         fadeOut={true}
         fadeOutColor="#ffffff"
         ariaLabel="Technology partners"
-      />
-
-      {/* Vertical loop with deceleration on hover */}
-      <LogoLoop
-        logos={techLogos}
-        speed={80}
-        direction="up"
-        logoHeight={48}
-        gap={40}
-        hoverSpeed={20}
-        fadeOut
       />
     </div>
   );
