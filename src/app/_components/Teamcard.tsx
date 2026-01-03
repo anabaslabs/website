@@ -1,8 +1,8 @@
 "use client";
-import ReflectiveCard from "../../components/ReflectiveCard";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { CometCard } from "@/components/ui/comet-card";
-import React from "react";
-
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 function Teamcard() {
   return (
     <div className="flex flex-wrap  gap-14 justify-center items-start w-full ">
@@ -35,6 +35,14 @@ function Teamcard() {
             <div className="text-xs text-gray-300 opacity-50">
               Frontend Developer
             </div>
+          </div>
+          <div className="w-full h-5 flex gap-5 justify-center items-center">
+            <Link href="https://github.com/AAYUSHMAN-BHARDWAJ1/" target="_blank">
+  <FaGithub size={26} />
+</Link>
+<Link href="https://x.com/Aayushman_bhard" target="_blank">
+  <FaSquareXTwitter size={26}/>
+</Link>
           </div>
         </button>
       </CometCard>
@@ -69,6 +77,14 @@ function Teamcard() {
               DevOps | Fullstack{" "}
             </div>
           </div>
+          <div className="w-full h-5 flex gap-5 justify-center items-center">
+            <Link href="https://github.com/itskdhere/" target="_blank">
+  <FaGithub size={26} />
+</Link>
+<Link href="https://x.com/itskdhere" target="_blank">
+  <FaSquareXTwitter size={26}/>
+</Link>
+          </div>
         </button>
       </CometCard>
       <CometCard>
@@ -101,6 +117,14 @@ function Teamcard() {
             <div className="text-xs text-gray-300 opacity-50">
               Agentic Developer
             </div>
+          </div>
+          <div className="w-full h-5 flex gap-5 justify-center items-center">
+            <Link href="https://github.com/saptarshiroy39/" target="_blank">
+  <FaGithub size={26} />
+</Link>
+<Link href="https://x.com/saptarshiroy39" target="_blank">
+  <FaSquareXTwitter size={26}/>
+</Link>
           </div>
         </button>
       </CometCard>
@@ -135,6 +159,14 @@ function Teamcard() {
               Fullstack Developer
             </div>
           </div>
+          <div className="w-full h-5 flex gap-5 justify-center items-center">
+            <Link href="https://github.com/ankit-4623/" target="_blank">
+  <FaGithub size={26} />
+</Link>
+<Link href="https://x.com/ankit_nayek" target="_blank">
+  <FaSquareXTwitter size={26}/>
+</Link>
+          </div>
         </button>
       </CometCard>
       <CometCard>
@@ -162,11 +194,19 @@ function Teamcard() {
               />
             </div>
           </div>
-          <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
+          <div className=" flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
             <div className="text-xs">Tuhin Pramanik</div>
             <div className="text-xs text-gray-300 opacity-50">
               FullStack | Agents
             </div>
+          </div>
+          <div className="w-full h-5 flex gap-5 justify-center items-center">
+            <Link href="https://github.com/tuhinpramanik4" target="_blank">
+  <FaGithub size={26} />
+</Link>
+<Link href="https://x.com/TuhinPramanik01" target="_blank">
+  <FaSquareXTwitter size={26}/>
+</Link>
           </div>
         </button>
       </CometCard>
