@@ -52,7 +52,7 @@ export default function TechStack() {
         gap={60}
         hoverSpeed={0}
         scaleOnHover={true}
-        fadeOut={true}
+        fadeOut={false}
         fadeOutColor="#ffffff"
         ariaLabel="Technology partners"
       />

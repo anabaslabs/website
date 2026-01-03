@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 function Teamcard() {
   return (
-    <div className="flex flex-wrap  gap-14 justify-center items-start w-full ">
+    <div className="flex flex-wrap  gap-2 sm:gap-14 justify-center items-start w-full ">
       <CometCard>
         <button
           type="button"
