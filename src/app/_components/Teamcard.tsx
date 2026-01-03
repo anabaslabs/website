@@ -9,7 +9,8 @@ function Teamcard() {
       <CometCard>
         <button
           type="button"
-          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-primary p-2  "
+          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px]  bg-[#f7ceba] border border-r-4 border-black
+ p-2  "
           aria-label="View invite F7RA"
           style={{
             transformStyle: "preserve-3d",
@@ -30,9 +31,9 @@ function Teamcard() {
               />
             </div>
           </div>
-          <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
+          <div className="mt-2 flex flex-col flex-shrink-0 items-center justify-between p-4 font-mono text-black">
             <div className="text-xs">Aayushman Bharadwaj</div>
-            <div className="text-xs text-gray-300 opacity-50">
+            <div className="text-xs text-black opacity-50">
               Frontend Developer
             </div>
           </div>
@@ -49,7 +50,7 @@ function Teamcard() {
       <CometCard>
         <button
           type="button"
-          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-primary p-2  "
+          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] bg-[#f7ceba] border border-r-4 border-black p-2  "
           aria-label="View invite F7RA"
           style={{
             transformStyle: "preserve-3d",
@@ -71,9 +72,9 @@ function Teamcard() {
               />
             </div>
           </div>
-          <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
+          <div className="mt-2 flex flex-col items-center justify-between p-4 font-mono text-black">
             <div className="text-xs">Krishnendu Das</div>
-            <div className="text-xs text-gray-300 opacity-50">
+            <div className="text-xs text-black opacity-50">
               DevOps | Fullstack{" "}
             </div>
           </div>
@@ -90,7 +91,7 @@ function Teamcard() {
       <CometCard>
         <button
           type="button"
-          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-primary p-2 "
+          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] bg-[#f7ceba] border border-r-4 border-black p-2 "
           aria-label="View invite F7RA"
           style={{
             transformStyle: "preserve-3d",
@@ -112,9 +113,9 @@ function Teamcard() {
               />
             </div>
           </div>
-          <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
+          <div className="mt-2 flex flex-col items-center justify-between p-4 font-mono text-black">
             <div className="text-xs">Saptarshi Roy</div>
-            <div className="text-xs text-gray-300 opacity-50">
+            <div className="text-xs text-black opacity-50">
               Agentic Developer
             </div>
           </div>
@@ -131,7 +132,7 @@ function Teamcard() {
       <CometCard>
         <button
           type="button"
-          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-primary p-2 "
+          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] bg-[#f7ceba] border border-r-4 border-black p-2 "
           aria-label="View invite F7RA"
           style={{
             transformStyle: "preserve-3d",
@@ -153,9 +154,9 @@ function Teamcard() {
               />
             </div>
           </div>
-          <div className="mt-2 flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
+          <div className="mt-2 flex flex-col items-center justify-between p-4 font-mono text-black">
             <div className="text-xs">Ankit Nayek</div>
-            <div className="text-xs text-gray-300 opacity-50">
+            <div className="text-xs text-black opacity-50">
               Fullstack Developer
             </div>
           </div>
@@ -172,7 +173,7 @@ function Teamcard() {
       <CometCard>
         <button
           type="button"
-          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-primary p-2  "
+          className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] bg-[#f7ceba] border border-r-4 border-black p-2  "
           aria-label="View invite F7RA"
           style={{
             transformStyle: "preserve-3d",
@@ -194,9 +195,9 @@ function Teamcard() {
               />
             </div>
           </div>
-          <div className=" flex flex-shrink-0 items-center justify-between p-4 font-mono text-white">
+          <div className=" flex flex-col items-center justify-between p-4 font-mono text-black">
             <div className="text-xs">Tuhin Pramanik</div>
-            <div className="text-xs text-gray-300 opacity-50">
+            <div className="text-xs text-black opacity-50">
               FullStack | Agents
             </div>
           </div>

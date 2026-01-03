@@ -1,8 +1,8 @@
 import React from "react";
-import TechStack from "../_components/TechStack";
-import About_Text from "../_components/About_Text";
-import Teamcard from "../_components/Teamcard";
-function Aboutpage() {
+import TechStack from "./TechStack";
+import About_Text from "./About_Text";
+import Teamcard from "./Teamcard";
+function Aboutus() {
   return (
     <div className="flex flex-col justify-start max-w-full items-center min-h-screen">
       <TechStack />
@@ -12,4 +12,4 @@ function Aboutpage() {
   );
 }
 
-export default Aboutpage;
+export default Aboutus;

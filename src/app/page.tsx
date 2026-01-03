@@ -1,11 +1,11 @@
 import Hero from "./_components/Hero";
-import Aboutpage from "./Aboutpage/page";
+import Aboutus from "./_components/Aboutus";
 
 export default function Home() {
   return (
     <main className="flex flex-col justify-start items-center min-h-screen">
       <Hero />
-      <Aboutpage />
+      <Aboutus />
     </main>
   );
 }
