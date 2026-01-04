@@ -29,8 +29,8 @@ export default function ContactPage() {
   const socialLinks = [
     { name: "GitHub", icon: Github, href: "https://github.com/anabaslabs", color: "hover:text-[#6e5494]" },
     { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/posts/anabaslabs_something-is-taking-shape-activity-7412526851425763328-0UZE", color: "hover:text-[#0077b5]" },
-    { name: "X", icon: X, href: "https://x.com/i/status/2006761472706359693", color: "hover:text-[#1da1f2]" },
-    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/p/DS-XUyFko9c/", color: "hover:text-[#e4405f]" },
+    { name: "X", icon: X, href: "https://x.com/anabaslabs", color: "hover:text-[#1da1f2]" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/anabaslabs", color: "hover:text-[#e4405f]" },
   ]
 
   const contactInfo = [
@@ -40,7 +40,7 @@ export default function ContactPage() {
 
   return (
     <main className="h-dvh bg-background flex flex-col overflow-hidden">
-      <section className="flex-1 py-3 md:py-6 px-3 md:px-8 flex flex-col min-h-0">
+      <section className="flex-1 py-3 md:py-6 px-4 md:px-8 flex flex-col min-h-0">
         <div className="max-w-7xl mx-auto h-full flex flex-col min-h-0">
           <div className="text-center mb-2 md:mb-6 flex-shrink-0">
             <h1 className="text-xl md:text-4xl font-bold text-balance mb-1 md:mb-2 tracking-tight">{"Contact"}</h1>
