@@ -79,6 +79,7 @@ export const CometCard = ({
   return (
     <div className={cn("perspective-distant transform-3d", className)}>
       <motion.div
+     
         ref={ref}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -88,7 +89,7 @@ export const CometCard = ({
           translateX,
           translateY,
         }}
-        initial={{ scale: 1, z: 0 }}
+         initial={false}
         whileHover={{
           scale: 1.05,
           z: 50,

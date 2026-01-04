@@ -1,14 +1,20 @@
 "use client";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { CometCard } from "@/components/ui/comet-card";
+
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
+import dynamic from "next/dynamic";
+
+const CometCard = dynamic(
+  () => import("@/components/ui/comet-card").then(m => m.CometCard),
+  { ssr: false }
+);
 function Teamcard() {
   return (
-    <div className="flex flex-wrap  gap-2 sm:gap-14 justify-center items-start w-full ">
+    <div className="flex flex-wrap  gap-2 sm:gap-16 justify-center items-start w-full ">
       <CometCard>
-        <button
-          type="button"
+        <div
+          
           className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px]  bg-[#f7ceba] border border-r-4 border-black
  p-2  "
           aria-label="View invite F7RA"
@@ -45,11 +51,10 @@ function Teamcard() {
   <FaSquareXTwitter size={26}/>
 </Link>
           </div>
-        </button>
+        </div>
       </CometCard>
       <CometCard>
-        <button
-          type="button"
+        <div
           className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] bg-[#f7ceba] border border-r-4 border-black p-2  "
           aria-label="View invite F7RA"
           style={{
@@ -86,11 +91,10 @@ function Teamcard() {
   <FaSquareXTwitter size={26}/>
 </Link>
           </div>
-        </button>
+        </div>
       </CometCard>
       <CometCard>
-        <button
-          type="button"
+        <div
           className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] bg-[#f7ceba] border border-r-4 border-black p-2 "
           aria-label="View invite F7RA"
           style={{
@@ -127,11 +131,10 @@ function Teamcard() {
   <FaSquareXTwitter size={26}/>
 </Link>
           </div>
-        </button>
+        </div>
       </CometCard>
       <CometCard>
-        <button
-          type="button"
+        <div
           className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] bg-[#f7ceba] border border-r-4 border-black p-2 "
           aria-label="View invite F7RA"
           style={{
@@ -168,11 +171,10 @@ function Teamcard() {
   <FaSquareXTwitter size={26}/>
 </Link>
           </div>
-        </button>
+        </div>
       </CometCard>
       <CometCard>
-        <button
-          type="button"
+        <div
           className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] bg-[#f7ceba] border border-r-4 border-black p-2  "
           aria-label="View invite F7RA"
           style={{
@@ -209,7 +211,7 @@ function Teamcard() {
   <FaSquareXTwitter size={26}/>
 </Link>
           </div>
-        </button>
+        </div>
       </CometCard>
     </div>
   );
