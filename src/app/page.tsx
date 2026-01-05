@@ -7,7 +7,7 @@ export default function Home() {
     <main className="flex flex-col justify-start items-center min-h-screen ">
       <Hero />
       <Aboutus />
-      <ContactPage/>
+      <ContactPage />
     </main>
   );
 }

@@ -77,7 +77,7 @@ export default function ContactPage() {
     >
       <div className="flex-1 py-3 md:py-6 px-4 md:px-8 flex flex-col min-h-0">
         <div className="max-w-7xl mx-auto h-full flex flex-col min-h-0">
-          <div className="text-center mb-2 md:mb-6 flex-shrink-0">
+          <div className="text-center mb-2 md:mb-6 shrink-0">
             <h1 className="text-xl md:text-4xl font-bold text-balance mb-1 md:mb-2 tracking-tight">
               {"Contact"}
             </h1>
@@ -91,14 +91,14 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-5 gap-3 md:gap-6 flex-1 min-h-0">
             <div className="md:col-span-3 flex flex-col min-h-0">
               <div className="bg-card border border-border rounded-lg p-3 md:p-6 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 flex-1 flex flex-col min-h-0">
-                <h2 className="text-base md:text-xl font-semibold mb-2 md:mb-4 flex-shrink-0">
+                <h2 className="text-base md:text-xl font-semibold mb-2 md:mb-4 shrink-0">
                   {"Send us a message"}
                 </h2>
                 <form
                   onSubmit={handleSubmit}
                   className="space-y-2 md:space-y-4 flex-1 flex flex-col min-h-0"
                 >
-                  <div className="space-y-0.5 flex-shrink-0">
+                  <div className="space-y-0.5 shrink-0">
                     <label
                       htmlFor="name"
                       className="text-[10px] md:text-sm font-medium text-foreground"
@@ -117,7 +117,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <div className="space-y-0.5 flex-shrink-0">
+                  <div className="space-y-0.5 shrink-0">
                     <label
                       htmlFor="email"
                       className="text-[10px] md:text-sm font-medium text-foreground"
@@ -139,7 +139,7 @@ export default function ContactPage() {
                   <div className="space-y-0.5 flex-1 flex flex-col min-h-0">
                     <label
                       htmlFor="message"
-                      className="text-[10px] md:text-sm font-medium text-foreground flex-shrink-0"
+                      className="text-[10px] md:text-sm font-medium text-foreground shrink-0"
                     >
                       {"Message"}
                     </label>
@@ -156,7 +156,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full px-3 py-1.5 md:px-4 md:py-3 text-[10px] md:text-sm bg-primary text-primary-foreground rounded-lg font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/50 flex-shrink-0"
+                    className="w-full px-3 py-1.5 md:px-4 md:py-3 text-[10px] md:text-sm bg-primary text-primary-foreground rounded-lg font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/50 shrink-0"
                   >
                     {"Send Message"}
                   </button>

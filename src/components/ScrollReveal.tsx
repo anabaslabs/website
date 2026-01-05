@@ -122,7 +122,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   return (
     <span ref={containerRef} className={`inline ${containerClassName}`}>
       <span
-        className={`text-[clamp(1.5rem,3vw,1.5rem)] leading-[1.5] font-semibold ${textClassName}`}
+        className={`text-[clamp(1.5rem,3vw,1.5rem)] leading-normal font-semibold ${textClassName}`}
       >
         {splitText}
       </span>

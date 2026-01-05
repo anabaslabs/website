@@ -57,7 +57,7 @@ function Teamcard() {
       {teamMembers.map((member, idx) => (
         <CometCard key={idx}>
           <div
-            className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-[16px] bg-[#f7ceba] border border-r-4 border-black p-2"
+            className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-3xl bg-[#f7ceba] border border-r-4 border-black p-2"
             style={{
               transformStyle: "preserve-3d",
               transform: "none",
@@ -65,10 +65,10 @@ function Teamcard() {
             }}
           >
             <div className="mx-2 flex-1">
-              <div className="relative mt-2 aspect-[3/4] w-full">
+              <div className="relative mt-2 aspect-3/4 w-full">
                 <img
                   loading="lazy"
-                  className="absolute inset-0 h-full w-full rounded-[16px] object-cover contrast-75"
+                  className="absolute inset-0 h-full w-full rounded-3xl object-cover contrast-75"
                   src={member.image}
                   alt={member.name}
                 />
