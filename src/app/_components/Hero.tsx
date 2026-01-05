@@ -8,7 +8,10 @@ import icon from "@/assets/icon.svg";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden"
+    >
       <div className="absolute top-0 left-0 mt-5 ml-5 md:ml-10 flex justify-center items-center gap-2">
         <Image src={icon} alt="Anabas Labs" width={34} height={34} />
         <p className="font-fredoka font-semibold text-primary text-2xl inline-block md:hidden lg:inline-block">

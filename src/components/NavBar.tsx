@@ -1,21 +1,34 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import PillNav from "@/components/PillNav";
+import { useHashScroll, type SectionConfig } from "@/lib/useHashScroll";
+
+const navItems = [
+  { label: "Home", href: "" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+];
+
+const sections: SectionConfig[] = [
+  { id: "home", hash: "" },
+  { id: "about", hash: "#about" },
+  { id: "contact", hash: "#contact" },
+];
 
 export default function NavBar() {
-  const pathname = usePathname();
+  const { activeHash, scrollToHash } = useHashScroll(sections);
+
+  const handleNavClick = (href: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToHash(href);
+  };
 
   return (
     <nav className="fixed flex justify-evenly items-center w-full mt-3.5 z-20">
       <PillNav
-        items={[
-          { label: "Home", href: "/" },
-          { label: "About", href: "/Aboutpage" },
-          { label: "Services", href: "/services" },
-          { label: "Contact", href: "/contact" },
-        ]}
-        activeHref={pathname}
+        items={navItems}
+        activeHref={activeHash}
+        onItemClick={handleNavClick}
         ease="power2.easeOut"
         baseColor="#fdf2ed" // f7ceba
         pillColor="#fdf2ed"

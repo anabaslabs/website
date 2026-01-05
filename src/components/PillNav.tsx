@@ -25,6 +25,7 @@ export interface PillNavProps {
   pillTextColor?: string;
   onMobileMenuClick?: () => void;
   initialLoadAnimation?: boolean;
+  onItemClick?: (href: string, e: React.MouseEvent) => void;
 }
 
 const PillNav: React.FC<PillNavProps> = ({
@@ -42,6 +43,7 @@ const PillNav: React.FC<PillNavProps> = ({
   pillTextColor,
   onMobileMenuClick,
   initialLoadAnimation = true,
+  onItemClick,
 }) => {
   const resolvedPillTextColor = pillTextColor ?? baseColor;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -287,6 +289,15 @@ const PillNav: React.FC<PillNavProps> = ({
     }
   };
 
+  const handleItemClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    if (onItemClick) {
+      onItemClick(href, e);
+    }
+  };
+
   const isExternalLink = (href: string) =>
     href.startsWith("http://") ||
     href.startsWith("https://") ||
@@ -459,6 +470,7 @@ const PillNav: React.FC<PillNavProps> = ({
                       aria-label={item.ariaLabel || item.label}
                       onMouseEnter={() => handleEnter(i)}
                       onMouseLeave={() => handleLeave(i)}
+                      onClick={(e) => handleItemClick(e, item.href)}
                     >
                       {PillContent}
                     </Link>
@@ -471,6 +483,7 @@ const PillNav: React.FC<PillNavProps> = ({
                       aria-label={item.ariaLabel || item.label}
                       onMouseEnter={() => handleEnter(i)}
                       onMouseLeave={() => handleLeave(i)}
+                      onClick={(e) => handleItemClick(e, item.href)}
                     >
                       {PillContent}
                     </a>
@@ -549,7 +562,10 @@ const PillNav: React.FC<PillNavProps> = ({
                     style={defaultStyle}
                     onMouseEnter={hoverIn}
                     onMouseLeave={hoverOut}
-                    onClick={handleMobileLinkClick}
+                    onClick={(e) => {
+                      handleItemClick(e, item.href);
+                      handleMobileLinkClick();
+                    }}
                   >
                     {item.label}
                   </Link>
@@ -560,7 +576,10 @@ const PillNav: React.FC<PillNavProps> = ({
                     style={defaultStyle}
                     onMouseEnter={hoverIn}
                     onMouseLeave={hoverOut}
-                    onClick={handleMobileLinkClick}
+                    onClick={(e) => {
+                      handleItemClick(e, item.href);
+                      handleMobileLinkClick();
+                    }}
                   >
                     {item.label}
                   </a>
