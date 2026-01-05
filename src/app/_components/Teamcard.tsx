@@ -2,11 +2,12 @@
 import { FaSquareXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
-import dynamic from "next/dynamic";
-const CometCard = dynamic(
-  () => import("@/components/ui/comet-card").then(m => m.CometCard),
-  { ssr: false }
-);
+import { CometCard } from "@/components/ui/comet-card";
+// import dynamic from "next/dynamic";
+// const CometCard = dynamic(
+//   () => import("@/components/ui/comet-card").then(m => m.CometCard),
+//   { ssr: false }
+// );
 const teamMembers = [
   {
     name: "Aayushman Bharadwaj",
