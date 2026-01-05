@@ -5,7 +5,7 @@ import type React from "react";
 import { useState } from "react";
 import { Mail, Phone, Github, Linkedin, X, Instagram } from "lucide-react";
 
-export default function ContactPage() {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

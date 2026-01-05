@@ -1,6 +1,3 @@
-import { ScrollProgress } from "@/components/ui/scroll-progress";
-import ClickSpark from "@/components/ClickSpark";
-import NavBar from "@/components/NavBar";
 import TailwindIndicator from "@/components/TwIndicator";
 
 import type { Metadata } from "next";
@@ -41,17 +38,7 @@ export default function RootLayout({
       <body
         className={`${fredoka.variable} ${lexend.variable} ${lora.variable} antialiased`}
       >
-        <ScrollProgress />
-        <ClickSpark
-          sparkColor="#ec4e0c"
-          sparkSize={10}
-          sparkRadius={15}
-          sparkCount={8}
-          duration={400}
-        >
-          <NavBar />
-          {children}
-        </ClickSpark>
+        {children}
         <TailwindIndicator />
       </body>
     </html>

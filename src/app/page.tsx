@@ -1,13 +1,28 @@
+import { ScrollProgress } from "@/components/ui/scroll-progress";
+import ClickSpark from "@/components/ClickSpark";
+import NavBar from "@/components/NavBar";
 import Hero from "./_components/Hero";
-import Aboutus from "./_components/Aboutus";
-import ContactPage from "./_components/Contact";
+import About from "./_components/About";
+import Contact from "./_components/Contact";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-start items-center min-h-screen ">
-      <Hero />
-      <Aboutus />
-      <ContactPage />
-    </main>
+    <>
+      <ScrollProgress className="z-999" />
+      <ClickSpark
+        sparkColor="#ec4e0c"
+        sparkSize={10}
+        sparkRadius={15}
+        sparkCount={8}
+        duration={400}
+      >
+        <NavBar />
+        <main className="flex flex-col justify-start items-center min-h-screen">
+          <Hero />
+          <About />
+          <Contact />
+        </main>
+      </ClickSpark>
+    </>
   );
 }

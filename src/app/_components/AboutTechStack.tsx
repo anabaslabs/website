@@ -41,7 +41,7 @@ const imageLogos = [
   },
 ];
 
-export default function TechStack() {
+export default function AboutTechStack() {
   return (
     <div className="h-17.5 relative overflow-hidden w-full  from-muted/50 via-background to-muted/50 flex  justify-center items-center">
       <LogoLoop

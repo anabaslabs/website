@@ -51,7 +51,7 @@ const teamMembers = [
   },
 ];
 
-function Teamcard() {
+export default function AboutTeam() {
   return (
     <div className="flex flex-wrap gap-2 sm:gap-16 justify-center items-start w-full">
       {teamMembers.map((member, idx) => (
@@ -94,5 +94,3 @@ function Teamcard() {
     </div>
   );
 }
-
-export default Teamcard;
