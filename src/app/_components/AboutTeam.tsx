@@ -1,13 +1,9 @@
 "use client";
-import { FaSquareXTwitter } from "react-icons/fa6";
+
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
 import { CometCard } from "@/components/ui/comet-card";
-// import dynamic from "next/dynamic";
-// const CometCard = dynamic(
-//   () => import("@/components/ui/comet-card").then(m => m.CometCard),
-//   { ssr: false }
-// );
+import { IconBrandGithub, IconBrandX } from "@tabler/icons-react";
+
 const teamMembers = [
   {
     name: "Aayushman Bharadwaj",
@@ -19,7 +15,7 @@ const teamMembers = [
   },
   {
     name: "Krishnendu Das",
-    role: "DevOps | Fullstack",
+    role: "DevOps | FullStack",
     image:
       "https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg",
     github: "https://github.com/itskdhere/",
@@ -82,10 +78,10 @@ export default function AboutTeam() {
 
             <div className="w-full h-5 flex gap-5 justify-center items-center">
               <Link href={member.github} target="_blank">
-                <FaGithub size={26} />
+                <IconBrandGithub size={22} />
               </Link>
               <Link href={member.x} target="_blank">
-                <FaSquareXTwitter size={26} />
+                <IconBrandX size={22} />
               </Link>
             </div>
           </div>

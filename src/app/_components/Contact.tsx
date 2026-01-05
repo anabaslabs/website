@@ -1,9 +1,15 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
-import { Mail, Phone, Github, Linkedin, X, Instagram } from "lucide-react";
+import {
+  IconBrandInstagram,
+  IconBrandGithub,
+  IconBrandX,
+  IconBrandLinkedin,
+  IconMail,
+  IconPhone,
+} from "@tabler/icons-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -31,25 +37,25 @@ export default function Contact() {
   const socialLinks = [
     {
       name: "GitHub",
-      icon: Github,
+      icon: IconBrandGithub,
       href: "https://github.com/anabaslabs",
       color: "hover:text-[#6e5494]",
     },
     {
       name: "LinkedIn",
-      icon: Linkedin,
+      icon: IconBrandLinkedin,
       href: "https://www.linkedin.com/posts/anabaslabs_something-is-taking-shape-activity-7412526851425763328-0UZE",
       color: "hover:text-[#0077b5]",
     },
     {
       name: "X",
-      icon: X,
+      icon: IconBrandX,
       href: "https://x.com/anabaslabs",
       color: "hover:text-[#1da1f2]",
     },
     {
       name: "Instagram",
-      icon: Instagram,
+      icon: IconBrandInstagram,
       href: "https://www.instagram.com/anabaslabs",
       color: "hover:text-[#e4405f]",
     },
@@ -57,13 +63,13 @@ export default function Contact() {
 
   const contactInfo = [
     {
-      icon: Mail,
+      icon: IconMail,
       label: "Email",
       value: "hello@anabaslabs.com",
       href: "mailto:hello@anabaslabs.com",
     },
     {
-      icon: Phone,
+      icon: IconPhone,
       label: "Phone",
       value: "+1 (555) 123-4567",
       href: "tel:+15551234567",

@@ -1,43 +1,69 @@
 "use client";
-import LogoLoop from "../../components/LogoLoop";
+
+import LogoLoop from "@/components/LogoLoop";
 import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-} from "react-icons/si";
+  siTypescript,
+  siTailwindcss,
+  siReact,
+  siNextdotjs,
+  siDocker,
+  siFastapi,
+  siGithub,
+  siSupabase,
+  siN8n,
+  siCloudflare,
+  siGooglecloud,
+} from "simple-icons";
+
+const SimpleIcon = ({
+  icon,
+  size = 60,
+}: {
+  icon: typeof siTypescript;
+  size?: number;
+}) => (
+  <div
+    style={{
+      width: size,
+      height: size,
+    }}
+    dangerouslySetInnerHTML={{ __html: icon.svg }}
+  />
+);
 
 const techLogos = [
-  { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
   {
-    node: <SiTypescript />,
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org",
+    node: <SimpleIcon icon={siTypescript} />,
   },
   {
-    node: <SiTailwindcss />,
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com",
-  },
-];
-
-// Alternative with image sources
-const imageLogos = [
-  {
-    src: "/logos/company1.png",
-    alt: "Company 1",
-    href: "https://company1.com",
+    node: <SimpleIcon icon={siTailwindcss} />,
   },
   {
-    src: "/logos/company2.png",
-    alt: "Company 2",
-    href: "https://company2.com",
+    node: <SimpleIcon icon={siReact} />,
   },
   {
-    src: "/logos/company3.png",
-    alt: "Company 3",
-    href: "https://company3.com",
+    node: <SimpleIcon icon={siNextdotjs} />,
+  },
+  {
+    node: <SimpleIcon icon={siDocker} />,
+  },
+  {
+    node: <SimpleIcon icon={siFastapi} />,
+  },
+  {
+    node: <SimpleIcon icon={siGithub} />,
+  },
+  {
+    node: <SimpleIcon icon={siSupabase} />,
+  },
+  {
+    node: <SimpleIcon icon={siN8n} />,
+  },
+  {
+    node: <SimpleIcon icon={siCloudflare} />,
+  },
+  {
+    node: <SimpleIcon icon={siGooglecloud} />,
   },
 ];
 
@@ -54,7 +80,7 @@ export default function AboutTechStack() {
         scaleOnHover={true}
         fadeOut={false}
         fadeOutColor="#ffffff"
-        ariaLabel="Technology partners"
+        ariaLabel="Our Tech Stack Logos"
       />
     </div>
   );
