@@ -13,6 +13,23 @@ import {
   siN8n,
   siCloudflare,
   siGooglecloud,
+  siLangchain,
+  siPython,
+  siExpo,
+  siLanggraph,
+  siVercel,
+  siGraphql,
+  siWebrtc,
+  siExpress,
+  siTerraform,
+  siRabbitmq,
+  siPrisma,
+  siRazer,
+  siPostgresql,
+  siMongodb,
+  siRedis,
+  siRazorpay,
+  siSocketdotio,
 } from "simple-icons";
 
 const SimpleIcon = ({
@@ -45,19 +62,31 @@ const techLogos = [
     node: <SimpleIcon icon={siNextdotjs} />,
   },
   {
-    node: <SimpleIcon icon={siDocker} />,
+    node: <SimpleIcon icon={siPython} />,
+  },
+   {
+    node: <SimpleIcon icon={siFastapi} />,
+  },
+   {
+    node: <SimpleIcon icon={siN8n} />,
   },
   {
-    node: <SimpleIcon icon={siFastapi} />,
+    node: <SimpleIcon icon={siExpo} />,
+  },
+  {
+    node: <SimpleIcon icon={siLangchain} />,
+  },
+  {
+    node: <SimpleIcon icon={siLanggraph} />,
   },
   {
     node: <SimpleIcon icon={siGithub} />,
   },
   {
-    node: <SimpleIcon icon={siSupabase} />,
+    node: <SimpleIcon icon={siDocker} />,
   },
   {
-    node: <SimpleIcon icon={siN8n} />,
+    node: <SimpleIcon icon={siSupabase} />,
   },
   {
     node: <SimpleIcon icon={siCloudflare} />,
@@ -65,6 +94,23 @@ const techLogos = [
   {
     node: <SimpleIcon icon={siGooglecloud} />,
   },
+  {
+    node: <SimpleIcon icon={siVercel} />,
+  },
+  {
+    node: <SimpleIcon icon={siGraphql} />,
+  },
+  {    node: <SimpleIcon icon={siWebrtc} />,  },
+  {    node: <SimpleIcon icon={siExpress} />,  },
+  {    node: <SimpleIcon icon={siTerraform} />,  },
+  {    node: <SimpleIcon icon={siRabbitmq} />,  },
+  {    node: <SimpleIcon icon={siPrisma} />,  },
+  {    node: <SimpleIcon icon={siRazorpay  } /> },
+  {node: <SimpleIcon icon={siPostgresql} />},
+  {    node: <SimpleIcon icon={siMongodb}  />, },
+  {    node: <SimpleIcon icon={siRedis} />,  },
+  {    node: <SimpleIcon icon={siSocketdotio} />,  },
+
 ];
 
 export default function AboutTechStack() {
