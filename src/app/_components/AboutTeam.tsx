@@ -7,39 +7,44 @@ import { IconBrandGithub, IconBrandX } from "@tabler/icons-react";
 const teamMembers = [
   {
     name: "Aayushman Bharadwaj",
+    email: "aayushman@anabaslabs.com",
     role: "Frontend Developer",
     image:
       "https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg",
-    github: "https://github.com/AAYUSHMAN-BHARDWAJ1/",
+    github: "https://github.com/AAYUSHMAN-BHARDWAJ1",
     x: "https://x.com/Aayushman_bhard",
   },
   {
     name: "Krishnendu Das",
-    role: "DevOps | FullStack",
+    email: "krishnendu@anabaslabs.com",
+    role: "DevOps | Full-Stack",
     image:
       "https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg",
-    github: "https://github.com/itskdhere/",
+    github: "https://github.com/itskdhere",
     x: "https://x.com/itskdhere",
   },
   {
     name: "Saptarshi Roy",
+    email: "saptarshi@anabaslabs.com",
     role: "Agentic Developer",
     image:
       "https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg",
-    github: "https://github.com/saptarshiroy39/",
+    github: "https://github.com/saptarshiroy39",
     x: "https://x.com/saptarshiroy39",
   },
   {
     name: "Ankit Nayek",
-    role: "Fullstack Developer",
+    email: "ankit@anabaslabs.com",
+    role: "Full-Stack Developer",
     image:
       "https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg",
-    github: "https://github.com/ankit-4623/",
+    github: "https://github.com/ankit-4623",
     x: "https://x.com/ankit_nayek",
   },
   {
     name: "Tuhin Pramanik",
-    role: "FullStack | Agents",
+    email: "tuhin@anabaslabs.com",
+    role: "Full-Stack | Agents",
     image:
       "https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg",
     github: "https://github.com/tuhinpramanik4",
@@ -53,7 +58,7 @@ export default function AboutTeam() {
       {teamMembers.map((member, idx) => (
         <CometCard key={idx}>
           <div
-            className="my-10 flex w-50 cursor-pointer flex-col items-stretch rounded-3xl bg-[#f7ceba] border border-r-4 border-black p-2"
+            className="my-10 flex w-52 cursor-pointer flex-col items-stretch rounded-3xl bg-[#f7ceba] border border-r-4 border-black p-1"
             style={{
               transformStyle: "preserve-3d",
               transform: "none",
@@ -71,12 +76,13 @@ export default function AboutTeam() {
               </div>
             </div>
 
-            <div className="mt-2 flex flex-col items-center p-4 font-mono text-black">
-              <div className="text-xs">{member.name}</div>
-              <div className="text-xs opacity-50">{member.role}</div>
+            <div className="mt-2 flex flex-col items-center p-2 font-mono text-black">
+              <div className="text-md">{member.name}</div>
+              <div className="text-xs opacity-50">({member.email})</div>
+              <div className="text-sm opacity-50">{member.role}</div>
             </div>
 
-            <div className="w-full h-5 flex gap-5 justify-center items-center">
+            <div className="w-full my-3 h-5 flex gap-5 justify-center items-center">
               <Link href={member.github} target="_blank">
                 <IconBrandGithub size={22} />
               </Link>

@@ -7,8 +7,8 @@ import {
   IconBrandGithub,
   IconBrandX,
   IconBrandLinkedin,
+  IconBrandYoutube,
   IconMail,
-  IconPhone,
 } from "@tabler/icons-react";
 
 export default function Contact() {
@@ -36,16 +36,16 @@ export default function Contact() {
 
   const socialLinks = [
     {
+      name: "Instagram",
+      icon: IconBrandInstagram,
+      href: "https://www.instagram.com/anabaslabs",
+      color: "hover:text-[#e4405f]",
+    },
+    {
       name: "GitHub",
       icon: IconBrandGithub,
       href: "https://github.com/anabaslabs",
       color: "hover:text-[#6e5494]",
-    },
-    {
-      name: "LinkedIn",
-      icon: IconBrandLinkedin,
-      href: "https://www.linkedin.com/posts/anabaslabs_something-is-taking-shape-activity-7412526851425763328-0UZE",
-      color: "hover:text-[#0077b5]",
     },
     {
       name: "X",
@@ -54,25 +54,37 @@ export default function Contact() {
       color: "hover:text-[#1da1f2]",
     },
     {
-      name: "Instagram",
-      icon: IconBrandInstagram,
-      href: "https://www.instagram.com/anabaslabs",
-      color: "hover:text-[#e4405f]",
+      name: "LinkedIn",
+      icon: IconBrandLinkedin,
+      href: "https://www.linkedin.com/company/anabaslabs",
+      color: "hover:text-[#0077b5]",
+    },
+    {
+      name: "YouTube",
+      icon: IconBrandYoutube,
+      href: "https://www.youtube.com/@anabaslabs",
+      color: "hover:text-[#ff0000]",
     },
   ];
 
   const contactInfo = [
     {
       icon: IconMail,
-      label: "Email",
+      label: "General inquiries",
       value: "hello@anabaslabs.com",
       href: "mailto:hello@anabaslabs.com",
     },
     {
-      icon: IconPhone,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      icon: IconMail,
+      label: "Business inquiries",
+      value: "contact@anabaslabs.com",
+      href: "mailto:contact@anabaslabs.com",
+    },
+    {
+      icon: IconMail,
+      label: "Support inquiries",
+      value: "support@anabaslabs.com",
+      href: "mailto:support@anabaslabs.com",
     },
   ];
 
@@ -162,9 +174,9 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full px-3 py-1.5 md:px-4 md:py-3 text-[10px] md:text-sm bg-primary text-primary-foreground rounded-lg font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/50 shrink-0"
+                    className="w-full px-3 py-1.5 md:px-4 md:py-3 text-[10px] md:text-sm bg-primary text-primary-foreground rounded-lg font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/50 hover:cursor-pointer shrink-0"
                   >
-                    {"Send Message"}
+                    Send Message
                   </button>
                 </form>
               </div>
@@ -200,7 +212,7 @@ export default function Contact() {
 
               <div className="bg-card border border-border rounded-lg p-3 md:p-6 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 flex-1">
                 <h2 className="text-base md:text-xl font-semibold mb-2 md:mb-4">
-                  {"Follow us"}
+                  Follow us
                 </h2>
                 <div className="flex flex-wrap gap-1.5 md:gap-3">
                   {socialLinks.map((social) => (
@@ -209,17 +221,16 @@ export default function Contact() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-2 md:p-3 bg-secondary rounded-lg transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-lg ${social.color} group`}
+                      className={`p-2 md:p-3 bg-secondary rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg ${social.color} group`}
                       aria-label={social.name}
                     >
-                      <social.icon className="w-4 h-4 md:w-6 md:h-6 transition-transform duration-300 group-hover:rotate-12" />
+                      <social.icon className="w-4 h-4 md:w-6 md:h-6 transition-transform duration-300" />
                     </a>
                   ))}
                 </div>
                 <p className="text-[10px] md:text-sm text-muted-foreground mt-2 md:mt-4 leading-relaxed">
-                  {
-                    "Connect with us on social media to stay updated with our latest news and updates."
-                  }
+                  Connect with us on social media to stay updated with our
+                  latest news and updates.
                 </p>
               </div>
             </div>

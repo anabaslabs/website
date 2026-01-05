@@ -1,7 +1,7 @@
 "use client";
 
-import ScrollReveal from "../../components/ScrollReveal";
-import { Highlighter } from "../../components/ui/highlighter";
+import ScrollReveal from "@/components/ScrollReveal";
+import { Highlighter } from "@/components/ui/highlighter";
 
 export default function AboutText() {
   return (
@@ -14,7 +14,7 @@ export default function AboutText() {
             baseRotation={0}
             blurStrength={0}
           >
-            AnabasLabs is a
+            Anabas Labs is a
           </ScrollReveal>{" "}
           <Highlighter action="underline" color="#ec4e0c">
             <ScrollReveal
