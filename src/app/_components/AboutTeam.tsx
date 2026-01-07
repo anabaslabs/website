@@ -55,10 +55,10 @@ const teamMembers = [
 export default function AboutTeam() {
   return (
     <div className="flex flex-wrap gap-2 sm:gap-16 justify-center items-start w-full">
-      {teamMembers.map((member, idx) => (
-        <CometCard key={idx}>
+      {teamMembers.map((member,id) => (
+        <CometCard key={id}>
           <div
-            className="my-10 flex w-52 cursor-pointer flex-col items-stretch rounded-3xl bg-[#f7ceba] border border-r-4 border-black p-1"
+            className="my-10 flex w-54 cursor-pointer flex-col items-stretch rounded-3xl bg-[#f7ceba] border border-r-4 border-black p-1"
             style={{
               transformStyle: "preserve-3d",
               transform: "none",
