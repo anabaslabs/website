@@ -2,6 +2,7 @@
 
 import type React from "react";
 import { useState } from "react";
+import { Highlighter } from "@/components/ui/highlighter";
 import {
   IconBrandInstagram,
   IconBrandGithub,
@@ -96,13 +97,20 @@ export default function Contact() {
       <div className="flex-1 py-3 md:py-6 px-4 md:px-8 flex flex-col min-h-0">
         <div className="max-w-7xl mx-auto h-full flex flex-col min-h-0">
           <div className="text-center mb-2 md:mb-6 shrink-0">
-            <h1 className="text-xl md:text-4xl font-bold text-balance mb-1 md:mb-2 tracking-tight">
-              {"Contact"}
-            </h1>
-            <p className="text-[10px] md:text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              {
-                "Let's start a conversation. We're here to help and answer any questions you might have."
-              }
+            <div className="text-center text-3xl md:text-4xl font-bold mb-2 md:mb-3 tracking-tight">
+              <Highlighter
+                action="underline"
+                color="#ec4e0c"
+                strokeWidth={2}
+                iterations={2}
+                isView={true}
+              >
+                Contact
+              </Highlighter>
+            </div>
+            <p className="text-md md:text-lg mx-auto leading-relaxed text-muted-foreground">
+              Let's start a conversation. We're here to help and answer any
+              questions you might have.
             </p>
           </div>
 

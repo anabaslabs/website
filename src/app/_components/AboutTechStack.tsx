@@ -1,5 +1,6 @@
 "use client";
 
+import { Highlighter } from "@/components/ui/highlighter";
 import LogoLoop from "@/components/LogoLoop";
 import {
   siTypescript,
@@ -34,7 +35,7 @@ import {
 
 const SimpleIcon = ({
   icon,
-  size = 60,
+  size = 55,
 }: {
   icon: typeof siTypescript;
   size?: number;
@@ -64,10 +65,10 @@ const techLogos = [
   {
     node: <SimpleIcon icon={siPython} />,
   },
-   {
+  {
     node: <SimpleIcon icon={siFastapi} />,
   },
-   {
+  {
     node: <SimpleIcon icon={siN8n} />,
   },
   {
@@ -100,34 +101,47 @@ const techLogos = [
   {
     node: <SimpleIcon icon={siGraphql} />,
   },
-  {    node: <SimpleIcon icon={siWebrtc} />,  },
-  {    node: <SimpleIcon icon={siExpress} />,  },
-  {    node: <SimpleIcon icon={siTerraform} />,  },
-  {    node: <SimpleIcon icon={siRabbitmq} />,  },
-  {    node: <SimpleIcon icon={siPrisma} />,  },
-  {    node: <SimpleIcon icon={siRazorpay  } /> },
-  {node: <SimpleIcon icon={siPostgresql} />},
-  {    node: <SimpleIcon icon={siMongodb}  />, },
-  {    node: <SimpleIcon icon={siRedis} />,  },
-  {    node: <SimpleIcon icon={siSocketdotio} />,  },
-
+  { node: <SimpleIcon icon={siWebrtc} /> },
+  { node: <SimpleIcon icon={siExpress} /> },
+  { node: <SimpleIcon icon={siTerraform} /> },
+  { node: <SimpleIcon icon={siRabbitmq} /> },
+  { node: <SimpleIcon icon={siPrisma} /> },
+  { node: <SimpleIcon icon={siRazorpay} /> },
+  { node: <SimpleIcon icon={siPostgresql} /> },
+  { node: <SimpleIcon icon={siMongodb} /> },
+  { node: <SimpleIcon icon={siRedis} /> },
+  { node: <SimpleIcon icon={siSocketdotio} /> },
 ];
 
 export default function AboutTechStack() {
   return (
-    <div className="h-17.5 relative overflow-hidden w-full  from-muted/50 via-background to-muted/50 flex  justify-center items-center">
-      <LogoLoop
-        logos={techLogos}
-        speed={100}
-        direction="left"
-        logoHeight={60}
-        gap={60}
-        hoverSpeed={0}
-        scaleOnHover={true}
-        fadeOut={false}
-        fadeOutColor="#ffffff"
-        ariaLabel="Our Tech Stack Logos"
-      />
-    </div>
+    <>
+      <div className="text-center text-xl md:text-2xl font-bold mb-4 md:mb-6 tracking-tight">
+        <Highlighter
+          action="box"
+          color="#ec4e0c"
+          strokeWidth={2}
+          iterations={1}
+          isView={true}
+        >
+          What technologies do we work with?
+        </Highlighter>
+      </div>
+
+      <div className="h-20 relative overflow-hidden w-full from-muted/50 via-background to-muted/50 flex  justify-center items-center">
+        <LogoLoop
+          logos={techLogos}
+          speed={100}
+          direction="left"
+          logoHeight={55}
+          gap={50}
+          hoverSpeed={0}
+          scaleOnHover={true}
+          fadeOut={false}
+          fadeOutColor="#ffffff"
+          ariaLabel="Our Tech Stack Logos"
+        />
+      </div>
+    </>
   );
 }
