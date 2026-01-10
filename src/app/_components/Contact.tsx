@@ -21,18 +21,14 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! We will get back to you soon.");
+    console.log("Contact form submitted:", formData);
     setFormData({ name: "", email: "", message: "" });
   };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const socialLinks = [
@@ -68,7 +64,8 @@ export default function Contact() {
     },
   ];
 
-  const contactInfo = [
+
+ const contactInfo = [
     {
       icon: IconMail,
       label: "General inquiries",
@@ -89,158 +86,143 @@ export default function Contact() {
     },
   ];
 
+
   return (
-    <section
-      id="contact"
-      className="h-dvh bg-background flex flex-col overflow-hidden"
-    >
-      <div className="flex-1 py-3 md:py-6 px-4 md:px-8 flex flex-col min-h-0">
-        <div className="max-w-7xl mx-auto h-full flex flex-col min-h-0">
-          <div className="text-center mb-2 md:mb-6 shrink-0">
-            <div className="text-center text-3xl md:text-4xl font-bold mb-2 md:mb-3 tracking-tight">
-              <Highlighter
-                action="underline"
-                color="#ec4e0c"
-                strokeWidth={2}
-                iterations={2}
-                isView={true}
-              >
-                Contact
-              </Highlighter>
+    <section id="contact" className="bg-background py-10 px-4 sm:px-6 md:px-12">
+      <div className="max-w-7xl mx-auto font-lexend mt-4">
+        {/* Header */}
+        <div className="text-center mb-8 md:mb-10 ">
+          <h1 className="mt-2 text-3xl sm:text-3xl md:text-3xl font-bold mb-3">
+            <Highlighter action="underline" color="#ec4e0c" strokeWidth={2} iterations={2} isView>
+              Contact
+            </Highlighter>
+          </h1>
+          <p className="text-base sm:text-lg md:text-2xl text-muted-foreground">
+            Let's start a conversation. We're here to help.
+          </p>
+        </div>
+
+        {/* Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+          {/* Send Message */}
+          <div className="md:col-span-2 flex">
+            <div
+              className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8 flex-1
+              transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50"
+            >
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6">
+                Send us a message
+              </h2>
+
+              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <div>
+                  <label className="text-sm sm:text-base font-medium">Name</label>
+                  <input
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base
+                      focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-sm sm:text-base font-medium">Email</label>
+                  <input
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base
+                      focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-sm sm:text-base font-medium">Message</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    className="w-full resize-none mt-1 px-5 py-7.5 bg-secondary border rounded-xl text-sm sm:text-base
+                      focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="mt-4 px-6 py-3 bg-primary text-primary-foreground rounded-full
+                    text-sm sm:text-base font-semibold transition
+                    hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/40"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
-            <p className="text-md md:text-lg mx-auto leading-relaxed text-muted-foreground">
-              Let's start a conversation. We're here to help and answer any
-              questions you might have.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-3 md:gap-6 flex-1 min-h-0">
-            <div className="md:col-span-3 flex flex-col min-h-0">
-              <div className="bg-card border border-border rounded-lg p-3 md:p-6 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 flex-1 flex flex-col min-h-0">
-                <h2 className="text-base md:text-xl font-semibold mb-2 md:mb-4 shrink-0">
-                  {"Send us a message"}
-                </h2>
-                <form
-                  onSubmit={handleSubmit}
-                  className="space-y-2 md:space-y-4 flex-1 flex flex-col min-h-0"
-                >
-                  <div className="space-y-0.5 shrink-0">
-                    <label
-                      htmlFor="name"
-                      className="text-[10px] md:text-sm font-medium text-foreground"
-                    >
-                      {"Name"}
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-2 py-1.5 md:px-3 md:py-2 text-[10px] md:text-sm bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 hover:border-primary/50"
-                      placeholder="Your name"
-                    />
-                  </div>
+          {/* Right Side */}
+          <div className="md:col-span-2 flex flex-col gap-6">
+            {/* Get in touch */}
+            <div
+              className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8
+              transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50"
+            >
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6">
+                Get in touch
+              </h2>
 
-                  <div className="space-y-0.5 shrink-0">
-                    <label
-                      htmlFor="email"
-                      className="text-[10px] md:text-sm font-medium text-foreground"
-                    >
-                      {"Email"}
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-2 py-1.5 md:px-3 md:py-2 text-[10px] md:text-sm bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 hover:border-primary/50"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-
-                  <div className="space-y-0.5 flex-1 flex flex-col min-h-0">
-                    <label
-                      htmlFor="message"
-                      className="text-[10px] md:text-sm font-medium text-foreground shrink-0"
-                    >
-                      {"Message"}
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      className="w-full flex-1 px-2 py-1.5 md:px-3 md:py-2 text-[10px] md:text-sm bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 hover:border-primary/50 resize-none min-h-0"
-                      placeholder="Tell us about your project..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full px-3 py-1.5 md:px-4 md:py-3 text-[10px] md:text-sm bg-primary text-primary-foreground rounded-lg font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/50 hover:cursor-pointer shrink-0"
+              <div className="space-y-5">
+                {contactInfo.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="flex items-start gap-4 group transition hover:translate-x-1"
                   >
-                    Send Message
-                  </button>
-                </form>
+                    <div
+                      className="p-3 sm:p-4 bg-secondary rounded-xl
+                      group-hover:bg-primary group-hover:text-primary-foreground transition"
+                    >
+                      <item.icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                    </div>
+                    <div>
+                      <p className="text-xs sm:text-sm text-muted-foreground">
+                        {item.label}
+                      </p>
+                      <p className="text-sm sm:text-base font-medium group-hover:text-primary transition">
+                        {item.value}
+                      </p>
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
 
-            <div className="md:col-span-2 flex flex-col gap-3 md:gap-6 min-h-0">
-              <div className="bg-card border border-border rounded-lg p-3 md:p-6 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 flex-1">
-                <h2 className="text-base md:text-xl font-semibold mb-2 md:mb-4">
-                  {"Get in touch"}
-                </h2>
-                <div className="space-y-2 md:space-y-4">
-                  {contactInfo.map((item) => (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      className="flex items-start gap-2 md:gap-3 group transition-all duration-300 hover:translate-x-2"
-                    >
-                      <div className="p-1.5 md:p-2.5 bg-secondary rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                        <item.icon className="w-3.5 h-3.5 md:w-5 md:h-5" />
-                      </div>
-                      <div>
-                        <p className="text-[9px] md:text-xs text-muted-foreground">
-                          {item.label}
-                        </p>
-                        <p className="text-[10px] md:text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-300">
-                          {item.value}
-                        </p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
+            {/* Follow us */}
+            <div
+              className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8
+              transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50"
+            >
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6">
+                Follow us
+              </h2>
+
+              <div className="flex flex-wrap gap-4 mb-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    className={`p-3 sm:p-4 bg-secondary rounded-xl transition
+                      hover:scale-110 hover:shadow-lg ${social.color}`}
+                  >
+                    <social.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
+                  </a>
+                ))}
               </div>
 
-              <div className="bg-card border border-border rounded-lg p-3 md:p-6 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 flex-1">
-                <h2 className="text-base md:text-xl font-semibold mb-2 md:mb-4">
-                  Follow us
-                </h2>
-                <div className="flex flex-wrap gap-1.5 md:gap-3">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`p-2 md:p-3 bg-secondary rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg ${social.color} group`}
-                      aria-label={social.name}
-                    >
-                      <social.icon className="w-4 h-4 md:w-6 md:h-6 transition-transform duration-300" />
-                    </a>
-                  ))}
-                </div>
-                <p className="text-[10px] md:text-sm text-muted-foreground mt-2 md:mt-4 leading-relaxed">
-                  Connect with us on social media to stay updated with our
-                  latest news and updates.
-                </p>
-              </div>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                Stay connected with our latest updates.
+              </p>
             </div>
           </div>
         </div>
