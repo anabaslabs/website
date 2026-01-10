@@ -2,11 +2,21 @@
 
 import Image from "next/image";
 import PixelBlast from "@/components/PixelBlast";
+import { WordRotate } from "@/components/ui/word-rotate";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+import { useHashScroll } from "@/lib/useHashScroll";
+import { sections } from "@/components/NavBar";
 import icon from "@/assets/icon.svg";
 
 export default function Hero() {
+  const { scrollToHash } = useHashScroll(sections);
+
+  const handleNavClick = (href: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToHash(href);
+  };
+
   return (
     <section
       id="home"
@@ -42,17 +52,31 @@ export default function Hero() {
       </div>
 
       <div className="relative text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-        <h1 className="font-lexend text-3xl md:text-5xl mb-6 text-foreground font-semibold">
-          Turning real problems into scalable software.
-        </h1>
+        <div className="flex justify-center items-center gap-3 font-lexend text-3xl md:text-5xl mb-6 text-foreground font-semibold">
+          <p>Turning real problems into scalable</p>
+          <WordRotate
+            words={["Software", "Systems", "Apps", "Agents"]}
+            className="text-primary"
+          />
+        </div>
         <h2 className="font-lora text-2xl md:text-3xl mb-8 text-muted-foreground font-semibold">
           Built publicly, Shipped properly.
         </h2>
         <div className="flex flex-col sm:flex-row justify-center items-center mx-auto gap-4 sm:gap-14">
-          <ShinyButton className="bg-secondary hover:bg-accent px-8 py-2 rounded-full">
+          <ShinyButton
+            className="bg-secondary hover:bg-accent px-8 py-2 rounded-full"
+            onClick={(e) => {
+              handleNavClick("#about", e);
+            }}
+          >
             Learn More
           </ShinyButton>
-          <InteractiveHoverButton className="bg-secondary">
+          <InteractiveHoverButton
+            className="bg-secondary"
+            onClick={(e) => {
+              handleNavClick("#contact", e);
+            }}
+          >
             Get in touch
           </InteractiveHoverButton>
         </div>

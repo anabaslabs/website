@@ -1,17 +1,11 @@
 "use client";
 import React, { useRef } from "react";
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-  useMotionTemplate,
-} from "motion/react";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { cn } from "@/lib/utils";
 
 export const CometCard = ({
-  rotateDepth = 17.5,
-  translateDepth = 20,
+  rotateDepth = 7.5,
+  translateDepth = 5,
   className,
   children,
 }: {
@@ -50,8 +44,8 @@ export const CometCard = ({
     [`${translateDepth}px`, `-${translateDepth}px`]
   );
 
-  const glareX = useTransform(mouseXSpring, [-0.5, 0.5], [0, 100]);
-  const glareY = useTransform(mouseYSpring, [-0.5, 0.5], [0, 100]);
+  // const glareX = useTransform(mouseXSpring, [-0.5, 0.5], [0, 100]);
+  // const glareY = useTransform(mouseYSpring, [-0.5, 0.5], [0, 100]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;

@@ -3,13 +3,13 @@
 import PillNav from "@/components/PillNav";
 import { useHashScroll, type SectionConfig } from "@/lib/useHashScroll";
 
-const navItems = [
+export const navItems = [
   { label: "Home", href: "" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
-const sections: SectionConfig[] = [
+export const sections: SectionConfig[] = [
   { id: "home", hash: "" },
   { id: "about", hash: "#about" },
   { id: "contact", hash: "#contact" },
