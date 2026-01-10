@@ -22,6 +22,12 @@ export default function Home() {
           <About />
           <Contact />
         </main>
+        <footer>
+          <p className="font-lexend w-full text-center py-4 text-sm text-gray-500">
+            &copy; 2025-{new Date().getFullYear()} Anabas Labs. All rights
+            reserved.
+          </p>
+        </footer>
       </ClickSpark>
     </>
   );
