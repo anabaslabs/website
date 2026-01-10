@@ -64,8 +64,7 @@ export default function Contact() {
     },
   ];
 
-
- const contactInfo = [
+  const contactInfo = [
     {
       icon: IconMail,
       label: "General inquiries",
@@ -86,74 +85,77 @@ export default function Contact() {
     },
   ];
 
-
   return (
     <section id="contact" className="bg-background py-10 px-4 sm:px-6 md:px-12">
       <div className="max-w-7xl mx-auto font-lexend mt-4">
-        {/* Header */}
         <div className="text-center mb-8 md:mb-10 ">
-          <h1 className="mt-2 text-3xl sm:text-3xl md:text-3xl font-bold mb-3">
-            <Highlighter action="underline" color="#ec4e0c" strokeWidth={2} iterations={2} isView>
+          <h1 className="text-center text-3xl md:text-4xl font-bold mb-2 md:mb-3 tracking-tight">
+            <Highlighter
+              action="underline"
+              color="#ec4e0c"
+              strokeWidth={2}
+              iterations={2}
+              isView
+            >
               Contact
             </Highlighter>
           </h1>
-          <p className="text-base sm:text-lg md:text-2xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Let's start a conversation. We're here to help.
           </p>
         </div>
 
-        {/* Layout */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
-          {/* Send Message */}
           <div className="md:col-span-2 flex">
-            <div
-              className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8 flex-1
-              transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50"
-            >
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6">
+            <div className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8 flex-1 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
+              <h2 className="text-lg md:text-xl font-semibold mb-6">
                 Send us a message
               </h2>
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div>
-                  <label className="text-sm sm:text-base font-medium">Name</label>
+                  <label className="text-sm sm:text-base font-medium">
+                    Name
+                  </label>
                   <input
                     name="name"
+                    placeholder="Your Name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base
-                      focus:ring-2 focus:ring-primary"
+                    className="w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <div>
-                  <label className="text-sm sm:text-base font-medium">Email</label>
+                  <label className="text-sm sm:text-base font-medium">
+                    Email
+                  </label>
                   <input
                     name="email"
+                    placeholder="Your Email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base
-                      focus:ring-2 focus:ring-primary"
+                    className="w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <div>
-                  <label className="text-sm sm:text-base font-medium">Message</label>
+                  <label className="text-sm sm:text-base font-medium">
+                    Message
+                  </label>
                   <textarea
                     name="message"
+                    placeholder="Your Message"
                     value={formData.message}
                     onChange={handleChange}
-                    rows={4}
-                    className="w-full resize-none mt-1 px-5 py-7.5 bg-secondary border rounded-xl text-sm sm:text-base
-                      focus:ring-2 focus:ring-primary"
+                    rows={5}
+                    className="w-full resize-none mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="mt-4 px-6 py-3 bg-primary text-primary-foreground rounded-full
-                    text-sm sm:text-base font-semibold transition
-                    hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/40"
+                  className="mt-6 px-6 py-3 bg-primary text-primary-foreground rounded-full text-sm sm:text-base font-semibold transition hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/40 cursor-pointer"
                 >
                   Send Message
                 </button>
@@ -161,14 +163,9 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Side */}
           <div className="md:col-span-2 flex flex-col gap-6">
-            {/* Get in touch */}
-            <div
-              className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8
-              transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50"
-            >
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6">
+            <div className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
+              <h2 className="text-lg md:text-xl font-semibold mb-8">
                 Get in touch
               </h2>
 
@@ -179,10 +176,7 @@ export default function Contact() {
                     href={item.href}
                     className="flex items-start gap-4 group transition hover:translate-x-1"
                   >
-                    <div
-                      className="p-3 sm:p-4 bg-secondary rounded-xl
-                      group-hover:bg-primary group-hover:text-primary-foreground transition"
-                    >
+                    <div className="p-3 sm:p-4 bg-secondary rounded-xl group-hover:bg-primary group-hover:text-primary-foreground transition">
                       <item.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div>
@@ -198,12 +192,8 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Follow us */}
-            <div
-              className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8
-              transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50"
-            >
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6">
+            <div className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
+              <h2 className="text-lg md:text-xl font-semibold mb-8">
                 Follow us
               </h2>
 
