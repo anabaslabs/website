@@ -11,7 +11,7 @@ const teamMembers = [
     email: "aayushman@anabaslabs.com",
     role: "Frontend Developer",
     image:
-      "https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg",
+      "https://media.licdn.com/dms/image/v2/D5603AQF0OU9Fkgq_gw/profile-displayphoto-shrink_200_200/B56ZUSsA0LGoAY-/0/1739775290829?e=1769644800&v=beta&t=I6kEVf-os2rhg2FEOGW79pb9XlFE3MOKmjqkaTXC2Nw",
     github: "https://github.com/AAYUSHMAN-BHARDWAJ1",
     x: "https://x.com/Aayushman_bhard",
   },
@@ -20,7 +20,7 @@ const teamMembers = [
     email: "krishnendu@anabaslabs.com",
     role: "DevOps | Full-Stack",
     image:
-      "https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg",
+      "https://media.licdn.com/dms/image/v2/D5603AQEr683hZzJBpA/profile-displayphoto-scale_200_200/B56Zl9mtugIAAc-/0/1758748926030?e=1769644800&v=beta&t=COC4OaggqmZicjT0ed861bBPIdYhzwVQjOl7j0uPY00",
     github: "https://github.com/itskdhere",
     x: "https://x.com/itskdhere",
   },
@@ -29,7 +29,7 @@ const teamMembers = [
     email: "saptarshi@anabaslabs.com",
     role: "Agentic Developer",
     image:
-      "https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg",
+      "https://media.licdn.com/dms/image/v2/D5603AQFF6-6_8ast_g/profile-displayphoto-scale_200_200/B56ZsTbJkxIEAg-/0/1765557445911?e=1769644800&v=beta&t=r35q-oWeZ6frH8JC6yZSWwoxpDI4HK10flCK9lQexxY",
     github: "https://github.com/saptarshiroy39",
     x: "https://x.com/saptarshiroy39",
   },
@@ -38,7 +38,7 @@ const teamMembers = [
     email: "ankit@anabaslabs.com",
     role: "Full-Stack Developer",
     image:
-      "https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg",
+      "https://media.licdn.com/dms/image/v2/D5603AQHlovpUB41N0w/profile-displayphoto-scale_200_200/B56Zurgi.sI0AY-/0/1768108995274?e=1769644800&v=beta&t=NxGf19nuv4zrmPzl151oJq6-_G7Fe9Ksd3jaoawtfps",
     github: "https://github.com/ankit-4623",
     x: "https://x.com/ankit_nayek",
   },
@@ -47,7 +47,7 @@ const teamMembers = [
     email: "tuhin@anabaslabs.com",
     role: "Full-Stack | Agents",
     image:
-      "https://i.pinimg.com/736x/d2/7e/91/d27e91a0eefd866d4f8ab64b4de1e742.jpg",
+      "https://media.licdn.com/dms/image/v2/D5603AQHlQfLQ5f04Vw/profile-displayphoto-shrink_400_400/B56ZTQ3oMJGoAg-/0/1738671032944?e=1769644800&v=beta&t=2vwWw2otK7aHpQmjyUcQ6beWHct1E2ZCsqRn6HHzUWo",
     github: "https://github.com/tuhinpramanik4",
     x: "https://x.com/TuhinPramanik01",
   },
