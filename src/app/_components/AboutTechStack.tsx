@@ -116,7 +116,7 @@ const techLogos = [
 export default function AboutTechStack() {
   return (
     <>
-      <div className="text-center text-xl md:text-2xl font-bold mb-4 md:mb-6 tracking-tight">
+      <div className="text-center text-xl md:text-2xl font-bold mb-4 md:mb-6 mt-2 tracking-tight">
         <Highlighter
           action="box"
           color="#ec4e0c"

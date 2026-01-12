@@ -7,13 +7,22 @@ import { IconBrandGithub, IconBrandX } from "@tabler/icons-react";
 
 const teamMembers = [
   {
-    name: "Aayushman Bharadwaj",
+    name: "Aayushman Bhardwaj",
     email: "aayushman@anabaslabs.com",
     role: "Frontend Developer",
     image:
       "https://media.licdn.com/dms/image/v2/D5603AQF0OU9Fkgq_gw/profile-displayphoto-shrink_200_200/B56ZUSsA0LGoAY-/0/1739775290829?e=1769644800&v=beta&t=I6kEVf-os2rhg2FEOGW79pb9XlFE3MOKmjqkaTXC2Nw",
     github: "https://github.com/AAYUSHMAN-BHARDWAJ1",
     x: "https://x.com/Aayushman_bhard",
+  },
+  {
+    name: "Ankit Nayek",
+    email: "ankit@anabaslabs.com",
+    role: "Full-Stack Developer",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5603AQHlovpUB41N0w/profile-displayphoto-scale_200_200/B56Zurgi.sI0AY-/0/1768108995274?e=1769644800&v=beta&t=NxGf19nuv4zrmPzl151oJq6-_G7Fe9Ksd3jaoawtfps",
+    github: "https://github.com/ankit-4623",
+    x: "https://x.com/ankit_nayek",
   },
   {
     name: "Krishnendu Das",
@@ -34,15 +43,6 @@ const teamMembers = [
     x: "https://x.com/saptarshiroy39",
   },
   {
-    name: "Ankit Nayek",
-    email: "ankit@anabaslabs.com",
-    role: "Full-Stack Developer",
-    image:
-      "https://media.licdn.com/dms/image/v2/D5603AQHlovpUB41N0w/profile-displayphoto-scale_200_200/B56Zurgi.sI0AY-/0/1768108995274?e=1769644800&v=beta&t=NxGf19nuv4zrmPzl151oJq6-_G7Fe9Ksd3jaoawtfps",
-    github: "https://github.com/ankit-4623",
-    x: "https://x.com/ankit_nayek",
-  },
-  {
     name: "Tuhin Pramanik",
     email: "tuhin@anabaslabs.com",
     role: "Full-Stack | Agents",
@@ -56,7 +56,7 @@ const teamMembers = [
 export default function AboutTeam() {
   return (
     <>
-      <div className="text-center text-xl md:text-2xl font-bold mt-20 tracking-tight">
+      <div className="text-center text-xl md:text-2xl font-bold mt-14 tracking-tight">
         <Highlighter
           action="box"
           color="#ec4e0c"

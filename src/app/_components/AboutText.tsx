@@ -4,7 +4,7 @@ import { Highlighter } from "@/components/ui/highlighter";
 
 export default function AboutText() {
   return (
-    <div className="max-h-screen w-full font-lexend text-[32px] flex flex-col justify-start items-center bg-linear-to-b from-transparent to-muted/10">
+    <div className="w-full font-lexend text-[32px] flex flex-col justify-start items-center mt-2 bg-linear-to-b from-transparent to-muted/10">
       <div className="p-12">
         <div className="text-center text-3xl md:text-4xl font-bold mb-2 md:mb-3 tracking-tight">
           <Highlighter
