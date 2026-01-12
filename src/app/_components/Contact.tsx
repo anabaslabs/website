@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useEffect, useState, useRef } from "react";
 import { Highlighter } from "@/components/ui/highlighter";
 import {
   IconBrandInstagram,
@@ -10,9 +10,9 @@ import {
   IconBrandLinkedin,
   IconBrandYoutube,
   IconMail,
-  IconCheck,
-  IconAlertCircle,
   IconLoader2,
+  IconCheck,
+  IconX,
 } from "@tabler/icons-react";
 import { submitContactForm } from "@/app/actions/contact";
 import {
@@ -25,6 +25,8 @@ const initialState: ContactFormState = {
   message: "",
   errors: {},
 };
+
+type ButtonStatus = "idle" | "loading" | "success" | "error";
 
 export default function Contact() {
   const [state, formAction, isPending] = useActionState(
@@ -44,13 +46,40 @@ export default function Contact() {
     message?: string;
   }>({});
 
-  // Reset form on successful submission
+  const [buttonStatus, setButtonStatus] = useState<ButtonStatus>("idle");
+  const statusTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   useEffect(() => {
-    if (state.success) {
-      setFormData({ name: "", email: "", message: "" });
-      setClientErrors({});
+    if (state.message) {
+      if (state.success) {
+        setButtonStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setClientErrors({});
+      } else {
+        setButtonStatus("error");
+      }
+
+      if (statusTimeoutRef.current) {
+        clearTimeout(statusTimeoutRef.current);
+      }
+
+      statusTimeoutRef.current = setTimeout(() => {
+        setButtonStatus("idle");
+      }, 3000);
     }
-  }, [state.success]);
+
+    return () => {
+      if (statusTimeoutRef.current) {
+        clearTimeout(statusTimeoutRef.current);
+      }
+    };
+  }, [state]);
+
+  useEffect(() => {
+    if (isPending) {
+      setButtonStatus("loading");
+    }
+  }, [isPending]);
 
   const validateField = (name: string, value: string) => {
     const fieldSchema =
@@ -69,7 +98,6 @@ export default function Contact() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    // Clear client error when user starts typing
     if (clientErrors[name as keyof typeof clientErrors]) {
       setClientErrors((prev) => ({ ...prev, [name]: undefined }));
     }
@@ -170,26 +198,8 @@ export default function Contact() {
                 Send us a message
               </h2>
 
-              {/* Status Message */}
-              {state.message && (
-                <div
-                  className={`mb-4 p-4 rounded-xl flex items-center gap-3 ${
-                    state.success
-                      ? "bg-green-500/10 text-green-500 border border-green-500/20"
-                      : "bg-red-500/10 text-red-500 border border-red-500/20"
-                  }`}
-                >
-                  {state.success ? (
-                    <IconCheck className="w-5 h-5 shrink-0" />
-                  ) : (
-                    <IconAlertCircle className="w-5 h-5 shrink-0" />
-                  )}
-                  <p className="text-sm">{state.message}</p>
-                </div>
-              )}
-
               <form action={formAction} className="flex flex-col gap-4">
-                <div>
+                <div className="relative group">
                   <label
                     htmlFor="name"
                     className="text-sm sm:text-base font-medium"
@@ -205,9 +215,6 @@ export default function Contact() {
                     onBlur={handleBlur}
                     disabled={isPending}
                     aria-invalid={!!getFieldError("name")}
-                    aria-describedby={
-                      getFieldError("name") ? "name-error" : undefined
-                    }
                     className={`w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed ${
                       getFieldError("name")
                         ? "border-red-500 focus:ring-red-500"
@@ -215,13 +222,16 @@ export default function Contact() {
                     }`}
                   />
                   {getFieldError("name") && (
-                    <p id="name-error" className="mt-1 text-sm text-red-500">
-                      {getFieldError("name")}
-                    </p>
+                    <div className="absolute right-3 top-9.5 text-red-500 cursor-help group/tooltip">
+                      <IconX className="w-5 h-5" />
+                      <span className="pointer-events-none absolute right-0 top-full mt-1 z-50 w-max max-w-xs rounded-lg bg-red-500 px-3 py-2 text-xs text-white opacity-0 shadow-lg transition-opacity group-hover/tooltip:opacity-100">
+                        {getFieldError("name")}
+                      </span>
+                    </div>
                   )}
                 </div>
 
-                <div>
+                <div className="relative group">
                   <label
                     htmlFor="email"
                     className="text-sm sm:text-base font-medium"
@@ -238,9 +248,6 @@ export default function Contact() {
                     onBlur={handleBlur}
                     disabled={isPending}
                     aria-invalid={!!getFieldError("email")}
-                    aria-describedby={
-                      getFieldError("email") ? "email-error" : undefined
-                    }
                     className={`w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed ${
                       getFieldError("email")
                         ? "border-red-500 focus:ring-red-500"
@@ -248,13 +255,16 @@ export default function Contact() {
                     }`}
                   />
                   {getFieldError("email") && (
-                    <p id="email-error" className="mt-1 text-sm text-red-500">
-                      {getFieldError("email")}
-                    </p>
+                    <div className="absolute right-3 top-9.5 text-red-500 cursor-help group/tooltip">
+                      <IconX className="w-5 h-5" />
+                      <span className="pointer-events-none absolute right-0 top-full mt-1 z-50 w-max max-w-xs rounded-lg bg-red-500 px-3 py-2 text-xs text-white opacity-0 shadow-lg transition-opacity group-hover/tooltip:opacity-100">
+                        {getFieldError("email")}
+                      </span>
+                    </div>
                   )}
                 </div>
 
-                <div>
+                <div className="relative group">
                   <label
                     htmlFor="message"
                     className="text-sm sm:text-base font-medium"
@@ -270,9 +280,6 @@ export default function Contact() {
                     onBlur={handleBlur}
                     disabled={isPending}
                     aria-invalid={!!getFieldError("message")}
-                    aria-describedby={
-                      getFieldError("message") ? "message-error" : undefined
-                    }
                     rows={5}
                     className={`w-full resize-none mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed ${
                       getFieldError("message")
@@ -281,21 +288,40 @@ export default function Contact() {
                     }`}
                   />
                   {getFieldError("message") && (
-                    <p id="message-error" className="mt-1 text-sm text-red-500">
-                      {getFieldError("message")}
-                    </p>
+                    <div className="absolute right-3 top-9.5 text-red-500 cursor-help group/tooltip">
+                      <IconX className="w-5 h-5" />
+                      <span className="pointer-events-none absolute right-0 top-full mt-1 z-50 w-max max-w-xs rounded-lg bg-red-500 px-3 py-2 text-xs text-white opacity-0 shadow-lg transition-opacity group-hover/tooltip:opacity-100">
+                        {getFieldError("message")}
+                      </span>
+                    </div>
                   )}
                 </div>
 
                 <button
                   type="submit"
-                  disabled={isPending}
-                  className="mt-6 px-6 py-3 bg-primary text-primary-foreground rounded-full text-sm sm:text-base font-semibold transition hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/40 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-none flex items-center justify-center gap-2"
+                  disabled={buttonStatus === "loading"}
+                  className={`mt-6 px-6 py-3 rounded-full text-sm sm:text-base font-semibold transition cursor-pointer disabled:cursor-not-allowed flex items-center justify-center gap-2 min-w-45 ${
+                    buttonStatus === "success"
+                      ? "bg-green-500 text-white hover:bg-green-600"
+                      : buttonStatus === "error"
+                      ? "bg-red-500 text-white hover:bg-red-600"
+                      : "bg-primary text-primary-foreground hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/40 disabled:opacity-50 disabled:hover:scale-100 disabled:hover:shadow-none"
+                  }`}
                 >
-                  {isPending ? (
+                  {buttonStatus === "loading" ? (
                     <>
                       <IconLoader2 className="w-5 h-5 animate-spin" />
                       Sending...
+                    </>
+                  ) : buttonStatus === "success" ? (
+                    <>
+                      <IconCheck className="w-5 h-5" />
+                      Message Sent!
+                    </>
+                  ) : buttonStatus === "error" ? (
+                    <>
+                      <IconX className="w-5 h-5" />
+                      Failed to Send
                     </>
                   ) : (
                     "Send Message"

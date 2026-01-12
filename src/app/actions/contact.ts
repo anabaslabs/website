@@ -5,20 +5,18 @@ import {
   type ContactFormState,
 } from "@/lib/validations/contact";
 
-const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
+const WEBHOOK_URL = process.env.WEBHOOK_URL;
 
 export async function submitContactForm(
   _prevState: ContactFormState,
   formData: FormData
 ): Promise<ContactFormState> {
-  // Parse form data
   const rawData = {
     name: formData.get("name"),
     email: formData.get("email"),
     message: formData.get("message"),
   };
 
-  // Validate with Zod
   const validationResult = contactFormSchema.safeParse(rawData);
 
   if (!validationResult.success) {
@@ -36,8 +34,7 @@ export async function submitContactForm(
 
   const { name, email, message } = validationResult.data;
 
-  // Check if webhook URL is configured
-  if (!DISCORD_WEBHOOK_URL) {
+  if (!WEBHOOK_URL) {
     console.error("Discord webhook URL is not configured");
     return {
       success: false,
@@ -45,13 +42,12 @@ export async function submitContactForm(
     };
   }
 
-  // Send to Discord webhook
   try {
     const discordEmbed = {
       embeds: [
         {
           title: "📬 New Contact Form Submission",
-          color: 0xec4e0c, // Orange color matching the brand
+          color: 0xec4e0c,
           fields: [
             {
               name: "👤 Name",
@@ -77,7 +73,7 @@ export async function submitContactForm(
       ],
     };
 
-    const response = await fetch(DISCORD_WEBHOOK_URL, {
+    const response = await fetch(WEBHOOK_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
