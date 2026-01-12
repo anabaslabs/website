@@ -1,7 +1,8 @@
-import TailwindIndicator from "@/components/TwIndicator";
-
 import type { Metadata } from "next";
 import { Fredoka, Lexend, Lora } from "next/font/google";
+import TailwindIndicator from "@/components/TwIndicator";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const fredoka = Fredoka({
@@ -87,6 +88,8 @@ export default function RootLayout({
       >
         {children}
         <TailwindIndicator />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
