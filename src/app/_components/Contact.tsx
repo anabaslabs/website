@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { Highlighter } from "@/components/ui/highlighter";
 import {
   IconBrandInstagram,
@@ -10,25 +10,83 @@ import {
   IconBrandLinkedin,
   IconBrandYoutube,
   IconMail,
+  IconCheck,
+  IconAlertCircle,
+  IconLoader2,
 } from "@tabler/icons-react";
+import { submitContactForm } from "@/app/actions/contact";
+import {
+  contactFormSchema,
+  type ContactFormState,
+} from "@/lib/validations/contact";
+
+const initialState: ContactFormState = {
+  success: false,
+  message: "",
+  errors: {},
+};
 
 export default function Contact() {
+  const [state, formAction, isPending] = useActionState(
+    submitContactForm,
+    initialState
+  );
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Contact form submitted:", formData);
-    setFormData({ name: "", email: "", message: "" });
+  const [clientErrors, setClientErrors] = useState<{
+    name?: string;
+    email?: string;
+    message?: string;
+  }>({});
+
+  // Reset form on successful submission
+  useEffect(() => {
+    if (state.success) {
+      setFormData({ name: "", email: "", message: "" });
+      setClientErrors({});
+    }
+  }, [state.success]);
+
+  const validateField = (name: string, value: string) => {
+    const fieldSchema =
+      contactFormSchema.shape[name as keyof typeof contactFormSchema.shape];
+    const result = fieldSchema.safeParse(value);
+
+    if (!result.success) {
+      return result.error.issues[0]?.message;
+    }
+    return undefined;
   };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    // Clear client error when user starts typing
+    if (clientErrors[name as keyof typeof clientErrors]) {
+      setClientErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
+  };
+
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    if (value.trim()) {
+      const error = validateField(name, value);
+      setClientErrors((prev) => ({ ...prev, [name]: error }));
+    }
+  };
+
+  const getFieldError = (field: "name" | "email" | "message") => {
+    return clientErrors[field] || state.errors?.[field]?.[0];
   };
 
   const socialLinks = [
@@ -112,52 +170,136 @@ export default function Contact() {
                 Send us a message
               </h2>
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              {/* Status Message */}
+              {state.message && (
+                <div
+                  className={`mb-4 p-4 rounded-xl flex items-center gap-3 ${
+                    state.success
+                      ? "bg-green-500/10 text-green-500 border border-green-500/20"
+                      : "bg-red-500/10 text-red-500 border border-red-500/20"
+                  }`}
+                >
+                  {state.success ? (
+                    <IconCheck className="w-5 h-5 shrink-0" />
+                  ) : (
+                    <IconAlertCircle className="w-5 h-5 shrink-0" />
+                  )}
+                  <p className="text-sm">{state.message}</p>
+                </div>
+              )}
+
+              <form action={formAction} className="flex flex-col gap-4">
                 <div>
-                  <label className="text-sm sm:text-base font-medium">
+                  <label
+                    htmlFor="name"
+                    className="text-sm sm:text-base font-medium"
+                  >
                     Name
                   </label>
                   <input
+                    id="name"
                     name="name"
                     placeholder="Your Name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary"
+                    onBlur={handleBlur}
+                    disabled={isPending}
+                    aria-invalid={!!getFieldError("name")}
+                    aria-describedby={
+                      getFieldError("name") ? "name-error" : undefined
+                    }
+                    className={`w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed ${
+                      getFieldError("name")
+                        ? "border-red-500 focus:ring-red-500"
+                        : "border-border"
+                    }`}
                   />
+                  {getFieldError("name") && (
+                    <p id="name-error" className="mt-1 text-sm text-red-500">
+                      {getFieldError("name")}
+                    </p>
+                  )}
                 </div>
 
                 <div>
-                  <label className="text-sm sm:text-base font-medium">
+                  <label
+                    htmlFor="email"
+                    className="text-sm sm:text-base font-medium"
+                  >
                     Email
                   </label>
                   <input
+                    id="email"
                     name="email"
+                    type="email"
                     placeholder="Your Email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary"
+                    onBlur={handleBlur}
+                    disabled={isPending}
+                    aria-invalid={!!getFieldError("email")}
+                    aria-describedby={
+                      getFieldError("email") ? "email-error" : undefined
+                    }
+                    className={`w-full mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed ${
+                      getFieldError("email")
+                        ? "border-red-500 focus:ring-red-500"
+                        : "border-border"
+                    }`}
                   />
+                  {getFieldError("email") && (
+                    <p id="email-error" className="mt-1 text-sm text-red-500">
+                      {getFieldError("email")}
+                    </p>
+                  )}
                 </div>
 
                 <div>
-                  <label className="text-sm sm:text-base font-medium">
+                  <label
+                    htmlFor="message"
+                    className="text-sm sm:text-base font-medium"
+                  >
                     Message
                   </label>
                   <textarea
+                    id="message"
                     name="message"
                     placeholder="Your Message"
                     value={formData.message}
                     onChange={handleChange}
+                    onBlur={handleBlur}
+                    disabled={isPending}
+                    aria-invalid={!!getFieldError("message")}
+                    aria-describedby={
+                      getFieldError("message") ? "message-error" : undefined
+                    }
                     rows={5}
-                    className="w-full resize-none mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary"
+                    className={`w-full resize-none mt-1 px-4 py-3 bg-secondary border rounded-xl text-sm sm:text-base focus:ring-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed ${
+                      getFieldError("message")
+                        ? "border-red-500 focus:ring-red-500"
+                        : "border-border"
+                    }`}
                   />
+                  {getFieldError("message") && (
+                    <p id="message-error" className="mt-1 text-sm text-red-500">
+                      {getFieldError("message")}
+                    </p>
+                  )}
                 </div>
 
                 <button
                   type="submit"
-                  className="mt-6 px-6 py-3 bg-primary text-primary-foreground rounded-full text-sm sm:text-base font-semibold transition hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/40 cursor-pointer"
+                  disabled={isPending}
+                  className="mt-6 px-6 py-3 bg-primary text-primary-foreground rounded-full text-sm sm:text-base font-semibold transition hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/40 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-none flex items-center justify-center gap-2"
                 >
-                  Send Message
+                  {isPending ? (
+                    <>
+                      <IconLoader2 className="w-5 h-5 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </button>
               </form>
             </div>

@@ -21,7 +21,8 @@
     "rough-notation": "^0.5.1",
     "simple-icons": "^16.4.0",
     "tailwind-merge": "^3.4.0",
-    "three": "^0.167.1"
+    "three": "^0.167.1",
+    "zod": "^4.3.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
