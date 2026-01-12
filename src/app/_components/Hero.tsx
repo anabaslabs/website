@@ -53,15 +53,22 @@ export default function Hero() {
 
       <div className="relative text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="flex justify-center items-center gap-3 font-lexend text-3xl md:text-5xl mb-6 text-foreground font-semibold">
-          <p>Empowering modern enterprises with  scalable software solutions.</p>
+          <p>Empowering modern enterprises with scalable software solutions.</p>
         </div>
-       <div className="flex justify-center items-center gap-3 font-lexend text-2xl md:text-3xl mb-6 text-foreground font-semibold">
+        <div className="flex justify-center items-center gap-3 font-lexend text-2xl md:text-3xl mb-6 text-foreground font-semibold">
           <h1>We Build</h1>
-           <WordRotate
-            words={["Software", "Systems","Websites", "Apps", "Agents"]}
+          <WordRotate
+            words={[
+              "Softwares",
+              "Systems",
+              "Websites",
+              "Web Apps",
+              "Mobile Apps",
+              "AI Agents",
+            ]}
             className="text-primary"
           />
-       </div>
+        </div>
         <h2 className="font-lora text-2xl md:text-3xl mb-8 text-muted-foreground font-semibold">
           Your Vision, Built with Precision.
         </h2>

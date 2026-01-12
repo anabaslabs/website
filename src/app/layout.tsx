@@ -25,8 +25,18 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: "Anabas Labs",
   description:
-    "Turning real problems into scalable software. Built publicly, Shipped properly.",
-  keywords: ["Anabas Labs"],
+    "Empowering modern enterprises with scalable software solutions. Your Vision, Built with Precision.",
+  keywords: [
+    "Anabas Labs",
+    "Empowering modern enterprises with scalable software solutions",
+    "Your Vision, Built with Precision",
+    "Build Softwares",
+    "Build Systems",
+    "Build Websites",
+    "Build Web Apps",
+    "Build Mobile Apps",
+    "Build AI Agents",
+  ],
   robots: "index, follow",
   creator: "Anabas Labs",
   authors: [{ name: "Anabas Labs", url: "https://anabaslabs.com" }],
@@ -34,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Anabas Labs",
     description:
-      "Turning real problems into scalable software. Built publicly, Shipped properly.",
+      "Empowering modern enterprises with scalable software solutions. Your Vision, Built with Precision.",
     url: "https://anabaslabs.com",
     siteName: "Anabas Labs",
     images: [
@@ -53,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Anabas Labs",
     description:
-      "Turning real problems into scalable software. Built publicly, Shipped properly.",
+      "Empowering modern enterprises with scalable software solutions. Your Vision, Built with Precision.",
     images: ["https://anabaslabs.com/banner.png"],
     creator: "@anabaslabs",
   },
