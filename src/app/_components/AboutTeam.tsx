@@ -36,7 +36,7 @@ const teamMembers = [
   {
     name: "Saptarshi Roy",
     email: "saptarshi@anabaslabs.com",
-    role: "Agentic Developer",
+    role: "Gen AI | Automation",
     image:
       "https://media.licdn.com/dms/image/v2/D5603AQFF6-6_8ast_g/profile-displayphoto-scale_200_200/B56ZsTbJkxIEAg-/0/1765557445911?e=1769644800&v=beta&t=r35q-oWeZ6frH8JC6yZSWwoxpDI4HK10flCK9lQexxY",
     github: "https://github.com/saptarshiroy39",
