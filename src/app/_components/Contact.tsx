@@ -199,6 +199,21 @@ export default function Contact() {
               </h2>
 
               <form action={formAction} className="flex flex-col gap-4">
+                <input
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    left: "-9999px",
+                    opacity: 0,
+                    height: 0,
+                    width: 0,
+                    overflow: "hidden",
+                  }}
+                />
                 <div className="relative group">
                   <label
                     htmlFor="name"
@@ -304,8 +319,8 @@ export default function Contact() {
                     buttonStatus === "success"
                       ? "bg-green-500 text-white hover:bg-green-600"
                       : buttonStatus === "error"
-                      ? "bg-red-500 text-white hover:bg-red-600"
-                      : "bg-primary text-primary-foreground hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/40 disabled:opacity-50 disabled:hover:scale-100 disabled:hover:shadow-none"
+                        ? "bg-red-500 text-white hover:bg-red-600"
+                        : "bg-primary text-primary-foreground hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/40 disabled:opacity-50 disabled:hover:scale-100 disabled:hover:shadow-none"
                   }`}
                 >
                   {buttonStatus === "loading" ? (

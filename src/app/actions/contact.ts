@@ -6,6 +6,7 @@ import {
 } from "@/lib/validations/contact";
 
 const WEBHOOK_URL = process.env.WEBHOOK_URL;
+const SPAM_WEBHOOK_URL = process.env.SPAM_WEBHOOK_URL;
 
 export async function submitContactForm(
   _prevState: ContactFormState,
@@ -16,6 +17,9 @@ export async function submitContactForm(
     email: formData.get("email"),
     message: formData.get("message"),
   };
+
+  const honeypot = formData.get("website");
+  const isSpam = honeypot && honeypot.toString().trim().length > 0;
 
   const validationResult = contactFormSchema.safeParse(rawData);
 
@@ -34,8 +38,20 @@ export async function submitContactForm(
 
   const { name, email, message } = validationResult.data;
 
-  if (!WEBHOOK_URL) {
-    console.error("Discord webhook URL is not configured");
+  const targetWebhook = isSpam ? SPAM_WEBHOOK_URL : WEBHOOK_URL;
+
+  if (!targetWebhook) {
+    if (isSpam) {
+      console.warn(
+        "Spam detected but SPAM_WEBHOOK_URL not configured - discarding"
+      );
+      return {
+        success: true,
+        message: "Thank you! Your message has been sent successfully.",
+      };
+    }
+
+    console.error("Discord Webhook URL is not configured");
     return {
       success: false,
       message: "Server configuration error. Please try again later.",
@@ -46,8 +62,10 @@ export async function submitContactForm(
     const discordEmbed = {
       embeds: [
         {
-          title: "📬 New Contact Form Submission",
-          color: 0xec4e0c,
+          title: isSpam
+            ? "🚨 [SPAM] Contact Form Submission"
+            : "📬 New Contact Form Submission",
+          color: isSpam ? 0xff0000 : 0xec4e0c,
           fields: [
             {
               name: "👤 Name",
@@ -73,7 +91,7 @@ export async function submitContactForm(
       ],
     };
 
-    const response = await fetch(WEBHOOK_URL, {
+    const response = await fetch(targetWebhook, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
