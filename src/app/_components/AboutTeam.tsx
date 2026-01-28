@@ -11,7 +11,7 @@ const teamMembers = [
     email: "aayushman@anabaslabs.com",
     role: "Frontend Developer",
     image:
-      "https://media.licdn.com/dms/image/v2/D5603AQF0OU9Fkgq_gw/profile-displayphoto-shrink_200_200/B56ZUSsA0LGoAY-/0/1739775290829?e=1769644800&v=beta&t=I6kEVf-os2rhg2FEOGW79pb9XlFE3MOKmjqkaTXC2Nw",
+      "https://media.licdn.com/dms/image/v2/D5603AQEgYdpWaDxNNw/profile-displayphoto-scale_200_200/B56Zv2Q6xNIcAY-/0/1769363191877?e=1771459200&v=beta&t=HJ30LAL2Ra7Xym4YEnV8ZVU1Wbd6ijhwNQDTbUoupdU",
     github: "https://github.com/AAYUSHMAN-BHARDWAJ1",
     x: "https://x.com/Aayushman_bhard",
   },
