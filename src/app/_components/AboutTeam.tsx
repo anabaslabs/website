@@ -80,7 +80,7 @@ export default function AboutTeam() {
               }}
             >
               <div className="mx-2 flex-1">
-                <div className="relative mt-2 aspect-3/4 w-full">
+                <div className="relative h-50 mt-2 aspect-3/4 w-full">
                   <img
                     loading="lazy"
                     className="absolute inset-0 h-full w-full rounded-3xl object-cover contrast-75"
