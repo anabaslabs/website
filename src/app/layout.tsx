@@ -24,6 +24,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://anabaslabs.com"),
   title: "Anabas Labs",
   description:
     "Empowering modern enterprises with scalable software solutions. Your Vision, Built with Precision.",
@@ -73,6 +74,10 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     shortcut: "/icon.png",
     apple: "/icon.png",
+  },
+
+  alternates: {
+    canonical: "https://anabaslabs.com",
   },
 };
 

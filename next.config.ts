@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
   // },
 
   reactCompiler: true,
+  trailingSlash: false,
+  skipTrailingSlashRedirect: false,
 };
 
 export default nextConfig;
