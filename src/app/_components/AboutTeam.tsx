@@ -11,13 +11,13 @@ import anphoto from "@/assets/an.jpeg";
 import abphoto from "@/assets/ab.jpeg";
 import tpphoto from "@/assets/tp.jpeg";
 const teamMembers = [
-  {
-    name: "Aayushman Bhardwaj",
-    email: "aayushman@anabaslabs.com",
-    role: "Frontend Developer",
-    image: abphoto,
-    github: "https://github.com/AAYUSHMAN-BHARDWAJ1",
-    x: "https://x.com/Aayushman_bhard",
+   {
+    name: "Tuhin Pramanik",
+    email: "tuhin@anabaslabs.com",
+    role: "Full-Stack | Agents",
+    image: tpphoto,
+    github: "https://github.com/tuhinpramanik4",
+    x: "https://x.com/TuhinPramanik01",
   },
   {
     name: "Ankit Nayek",
@@ -43,14 +43,14 @@ const teamMembers = [
     github: "https://github.com/saptarshiroy39",
     x: "https://x.com/saptarshiroy39",
   },
-  {
-    name: "Tuhin Pramanik",
-    email: "tuhin@anabaslabs.com",
-    role: "Full-Stack | Agents",
-    image: tpphoto,
-    github: "https://github.com/tuhinpramanik4",
-    x: "https://x.com/TuhinPramanik01",
-  },
+   {
+    name: "Aayushman Bhardwaj",
+    email: "aayushman@anabaslabs.com",
+    role: "Frontend Developer",
+    image: abphoto,
+    github: "https://github.com/AAYUSHMAN-BHARDWAJ1",
+    x: "https://x.com/Aayushman_bhard",
+  }
 ];
 
 export default function AboutTeam() {
