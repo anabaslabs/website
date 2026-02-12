@@ -19,6 +19,14 @@ const teamMembers = [
     github: "https://github.com/tuhinpramanik4",
     x: "https://x.com/TuhinPramanik01",
   },
+   {
+    name: "Aayushman Bhardwaj",
+    email: "aayushman@anabaslabs.com",
+    role: "Frontend Developer",
+    image: abphoto,
+    github: "https://github.com/AAYUSHMAN-BHARDWAJ1",
+    x: "https://x.com/Aayushman_bhard",
+  },
   {
     name: "Ankit Nayek",
     email: "ankit@anabaslabs.com",
@@ -42,14 +50,6 @@ const teamMembers = [
     image: srphoto,
     github: "https://github.com/saptarshiroy39",
     x: "https://x.com/saptarshiroy39",
-  },
-   {
-    name: "Aayushman Bhardwaj",
-    email: "aayushman@anabaslabs.com",
-    role: "Frontend Developer",
-    image: abphoto,
-    github: "https://github.com/AAYUSHMAN-BHARDWAJ1",
-    x: "https://x.com/Aayushman_bhard",
   }
 ];
 
