@@ -18,7 +18,7 @@ export default function AboutText() {
           </Highlighter>
         </div>
 
-        <div className="font-semibold text-lg md:text-xl leading-relaxed tracking-wide">
+        <div className="font-semibold text-lg md:text-xl max-w-6xl leading-relaxed tracking-wide">
           Anabas Labs is a software engineering studio dedicated to building
           scalable, real-world systems for startups and enterprises. We
           specialize in designing robust{" "}

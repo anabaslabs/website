@@ -3,6 +3,7 @@ import ClickSpark from "@/components/ClickSpark";
 import NavBar from "@/components/NavBar";
 import Hero from "./_components/Hero";
 import About from "./_components/About";
+import Projects from "./_components/Projects";
 import Contact from "./_components/Contact";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <main className="flex flex-col justify-start items-center min-h-screen">
           <Hero />
           <About />
+          <Projects />
           <Contact />
         </main>
         <footer>

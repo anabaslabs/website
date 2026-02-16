@@ -6,12 +6,14 @@ import { useHashScroll, type SectionConfig } from "@/lib/useHashScroll";
 export const navItems = [
   { label: "Home", href: "" },
   { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const sections: SectionConfig[] = [
   { id: "home", hash: "" },
   { id: "about", hash: "#about" },
+  { id: "projects", hash: "#projects" },
   { id: "contact", hash: "#contact" },
 ];
 

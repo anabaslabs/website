@@ -3,22 +3,13 @@
 import type React from "react";
 import { useActionState, useEffect, useState, useRef } from "react";
 import { Highlighter } from "@/components/ui/highlighter";
-import {
-  IconBrandInstagram,
-  IconBrandGithub,
-  IconBrandX,
-  IconBrandLinkedin,
-  IconBrandYoutube,
-  IconMail,
-  IconLoader2,
-  IconCheck,
-  IconX,
-} from "@tabler/icons-react";
-import { submitContactForm } from "@/app/actions/contact";
+import { IconLoader2, IconCheck, IconX } from "@tabler/icons-react";
 import {
   contactFormSchema,
   type ContactFormState,
 } from "@/lib/validations/contact";
+import { submitContactForm } from "@/app/actions/contact";
+import { contactInfo, socialLinks } from "@/data/contact";
 
 const initialState: ContactFormState = {
   success: false,
@@ -117,63 +108,12 @@ export default function Contact() {
     return clientErrors[field] || state.errors?.[field]?.[0];
   };
 
-  const socialLinks = [
-    {
-      name: "Instagram",
-      icon: IconBrandInstagram,
-      href: "https://www.instagram.com/anabaslabs",
-      color: "hover:text-[#e4405f]",
-    },
-    {
-      name: "GitHub",
-      icon: IconBrandGithub,
-      href: "https://github.com/anabaslabs",
-      color: "hover:text-[#6e5494]",
-    },
-    {
-      name: "X",
-      icon: IconBrandX,
-      href: "https://x.com/anabaslabs",
-      color: "hover:text-[#1da1f2]",
-    },
-    {
-      name: "LinkedIn",
-      icon: IconBrandLinkedin,
-      href: "https://www.linkedin.com/company/anabaslabs",
-      color: "hover:text-[#0077b5]",
-    },
-    {
-      name: "YouTube",
-      icon: IconBrandYoutube,
-      href: "https://www.youtube.com/@anabaslabs",
-      color: "hover:text-[#ff0000]",
-    },
-  ];
-
-  const contactInfo = [
-    {
-      icon: IconMail,
-      label: "General inquiries",
-      value: "hello@anabaslabs.com",
-      href: "mailto:hello@anabaslabs.com",
-    },
-    {
-      icon: IconMail,
-      label: "Business inquiries",
-      value: "contact@anabaslabs.com",
-      href: "mailto:contact@anabaslabs.com",
-    },
-    {
-      icon: IconMail,
-      label: "Support inquiries",
-      value: "support@anabaslabs.com",
-      href: "mailto:support@anabaslabs.com",
-    },
-  ];
-
   return (
-    <section id="contact" className="bg-background py-10 px-4 sm:px-6 md:px-12">
-      <div className="max-w-7xl mx-auto font-lexend mt-4">
+    <section
+      id="contact"
+      className="bg-background py-10 px-4 sm:px-6 md:px-12 w-full"
+    >
+      <div className="max-w-6xl mx-auto font-lexend mt-4">
         <div className="text-center mb-8 md:mb-10 ">
           <h1 className="text-center text-3xl md:text-4xl font-bold mb-2 md:mb-3 tracking-tight">
             <Highlighter
@@ -193,7 +133,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           <div className="md:col-span-2 flex">
-            <div className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8 flex-1 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
+            <div className="bg-card border-2 border-border rounded-2xl p-5 sm:p-6 md:p-8 flex-1 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
               <h2 className="text-lg md:text-xl font-semibold mb-6">
                 Send us a message
               </h2>
@@ -347,7 +287,7 @@ export default function Contact() {
           </div>
 
           <div className="md:col-span-2 flex flex-col gap-6">
-            <div className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
+            <div className="bg-card border-2 border-border rounded-2xl p-5 sm:p-6 md:p-8 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
               <h2 className="text-lg md:text-xl font-semibold mb-8">
                 Get in touch
               </h2>
@@ -375,7 +315,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
+            <div className="bg-card border-2 border-border rounded-2xl p-5 sm:p-6 md:p-8 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
               <h2 className="text-lg md:text-xl font-semibold mb-8">
                 Follow us
               </h2>
@@ -385,6 +325,7 @@ export default function Contact() {
                   <a
                     key={social.name}
                     href={social.href}
+                    target="_blank"
                     className={`p-3 sm:p-4 bg-secondary rounded-xl transition
                       hover:scale-110 hover:shadow-lg ${social.color}`}
                   >
