@@ -3,22 +3,13 @@
 import type React from "react";
 import { useActionState, useEffect, useState, useRef } from "react";
 import { Highlighter } from "@/components/ui/highlighter";
-import {
-  IconBrandInstagram,
-  IconBrandGithub,
-  IconBrandX,
-  IconBrandLinkedin,
-  IconBrandYoutube,
-  IconMail,
-  IconLoader2,
-  IconCheck,
-  IconX,
-} from "@tabler/icons-react";
-import { submitContactForm } from "@/app/actions/contact";
+import { IconLoader2, IconCheck, IconX } from "@tabler/icons-react";
 import {
   contactFormSchema,
   type ContactFormState,
 } from "@/lib/validations/contact";
+import { submitContactForm } from "@/app/actions/contact";
+import { contactInfo, socialLinks } from "@/data/contact";
 
 const initialState: ContactFormState = {
   success: false,
@@ -116,60 +107,6 @@ export default function Contact() {
   const getFieldError = (field: "name" | "email" | "message") => {
     return clientErrors[field] || state.errors?.[field]?.[0];
   };
-
-  const socialLinks = [
-    {
-      name: "Instagram",
-      icon: IconBrandInstagram,
-      href: "https://www.instagram.com/anabaslabs",
-      color: "hover:text-[#e4405f]",
-    },
-    {
-      name: "GitHub",
-      icon: IconBrandGithub,
-      href: "https://github.com/anabaslabs",
-      color: "hover:text-[#6e5494]",
-    },
-    {
-      name: "X",
-      icon: IconBrandX,
-      href: "https://x.com/anabaslabs",
-      color: "hover:text-[#1da1f2]",
-    },
-    {
-      name: "LinkedIn",
-      icon: IconBrandLinkedin,
-      href: "https://www.linkedin.com/company/anabaslabs",
-      color: "hover:text-[#0077b5]",
-    },
-    {
-      name: "YouTube",
-      icon: IconBrandYoutube,
-      href: "https://www.youtube.com/@anabaslabs",
-      color: "hover:text-[#ff0000]",
-    },
-  ];
-
-  const contactInfo = [
-    {
-      icon: IconMail,
-      label: "General inquiries",
-      value: "hello@anabaslabs.com",
-      href: "mailto:hello@anabaslabs.com",
-    },
-    {
-      icon: IconMail,
-      label: "Business inquiries",
-      value: "contact@anabaslabs.com",
-      href: "mailto:contact@anabaslabs.com",
-    },
-    {
-      icon: IconMail,
-      label: "Support inquiries",
-      value: "support@anabaslabs.com",
-      href: "mailto:support@anabaslabs.com",
-    },
-  ];
 
   return (
     <section id="contact" className="bg-background py-10 px-4 sm:px-6 md:px-12">
