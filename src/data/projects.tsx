@@ -11,7 +11,7 @@ export const projects: ProjectCardProps[] = [
     title: "Anabas Labs Website",
     description:
       "Our website has a modern design showcasing services, projects, and contact details, optimized for performance and SEO.",
-    dates: "Jan 2026 - Present",
+    dates: "Dec 2025 - Present",
     contributors: ["Anabas Labs Team"],
     tags: [
       "TypeScript",

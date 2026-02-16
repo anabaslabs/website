@@ -16,7 +16,7 @@ export const teamMembers = [
   {
     name: "Aayushman Bhardwaj",
     email: "aayushman@anabaslabs.com",
-    role: "Frontend Developer",
+    role: "Graphic Designer",
     image: abphoto,
     github: "https://github.com/AAYUSHMAN-BHARDWAJ1",
     x: "https://x.com/Aayushman_bhard",
