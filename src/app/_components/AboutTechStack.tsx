@@ -19,7 +19,7 @@ export default function AboutTechStack() {
         </Highlighter>
       </div>
 
-      <div className="h-20 relative overflow-hidden w-full from-muted/50 via-background to-muted/50 flex  justify-center items-center">
+      <div className="h-20 relative overflow-hidden w-full from-muted/50 via-background to-muted/50 flex justify-center items-center">
         <LogoLoop
           logos={techLogos}
           speed={100}

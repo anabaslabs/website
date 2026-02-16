@@ -22,11 +22,11 @@ export default function AboutTeam() {
         </Highlighter>
       </div>
 
-      <div className="flex flex-wrap gap-2 sm:gap-16 justify-center items-start w-full">
+      <div className="flex flex-wrap gap-2 sm:gap-5 justify-center items-start w-full">
         {teamMembers.map((member, id) => (
           <CometCard key={id}>
             <div
-              className="my-10 flex w-54 cursor-pointer flex-col items-stretch rounded-3xl bg-[#f7ceba] border border-r-4 border-black p-1"
+              className="my-10 flex w-54 cursor-pointer flex-col items-stretch rounded-3xl p-1 bg-card border-2 border-border hover:shadow-lg hover:shadow-primary/10 hover:border-primary/50"
               style={{
                 transformStyle: "preserve-3d",
                 transform: "none",
@@ -48,7 +48,7 @@ export default function AboutTeam() {
               <div className="mt-2 flex flex-col items-center p-2 font-mono text-black">
                 <div className="text-md">{member.name}</div>
                 <div className="text-xs opacity-50">({member.email})</div>
-                <div className="text-sm opacity-50">{member.role}</div>
+                <div className="text-sm opacity-80">{member.role}</div>
               </div>
 
               <div className="w-full my-3 h-5 flex gap-5 justify-center items-center">

@@ -62,7 +62,7 @@ export function ProjectCard({
   return (
     <div
       className={cn(
-        "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200",
+        "flex flex-col h-full border-2 border-border rounded-xl overflow-hidden cursor-pointer transition-all hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 duration-200 bg-card",
         className
       )}
     >

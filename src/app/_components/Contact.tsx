@@ -109,8 +109,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-background py-10 px-4 sm:px-6 md:px-12">
-      <div className="max-w-7xl mx-auto font-lexend mt-4">
+    <section
+      id="contact"
+      className="bg-background py-10 px-4 sm:px-6 md:px-12 w-full"
+    >
+      <div className="max-w-6xl mx-auto font-lexend mt-4">
         <div className="text-center mb-8 md:mb-10 ">
           <h1 className="text-center text-3xl md:text-4xl font-bold mb-2 md:mb-3 tracking-tight">
             <Highlighter
@@ -130,7 +133,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           <div className="md:col-span-2 flex">
-            <div className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8 flex-1 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
+            <div className="bg-card border-2 border-border rounded-2xl p-5 sm:p-6 md:p-8 flex-1 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
               <h2 className="text-lg md:text-xl font-semibold mb-6">
                 Send us a message
               </h2>
@@ -284,7 +287,7 @@ export default function Contact() {
           </div>
 
           <div className="md:col-span-2 flex flex-col gap-6">
-            <div className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
+            <div className="bg-card border-2 border-border rounded-2xl p-5 sm:p-6 md:p-8 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
               <h2 className="text-lg md:text-xl font-semibold mb-8">
                 Get in touch
               </h2>
@@ -312,7 +315,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-card border border-border rounded-2xl p-5 sm:p-6 md:p-8 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
+            <div className="bg-card border-2 border-border rounded-2xl p-5 sm:p-6 md:p-8 transition hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50">
               <h2 className="text-lg md:text-xl font-semibold mb-8">
                 Follow us
               </h2>
@@ -322,6 +325,7 @@ export default function Contact() {
                   <a
                     key={social.name}
                     href={social.href}
+                    target="_blank"
                     className={`p-3 sm:p-4 bg-secondary rounded-xl transition
                       hover:scale-110 hover:shadow-lg ${social.color}`}
                   >
