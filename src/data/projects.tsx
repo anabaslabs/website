@@ -7,37 +7,37 @@ import {
 } from "@tabler/icons-react";
 
 export const projects: ProjectCardProps[] = [
-  {
-    title: "Anabas Labs Website",
-    description:
-      "Our website has a modern design showcasing services, projects, and contact details, optimized for performance and SEO.",
-    dates: "Dec 2025 - Present",
-    contributors: ["Anabas Labs Team"],
-    tags: [
-      "TypeScript",
-      "Next.js",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "GSAP",
-      "Framer Motion",
-      "Three.js",
-      "Vercel",
-    ],
-    links: [
-      {
-        type: "Website",
-        href: "https://anabaslabs.com",
-        icon: <IconWorld size={18} />,
-      },
-      {
-        type: "GitHub",
-        href: "https://github.com/anabaslabs/website",
-        icon: <IconBrandGithub size={18} />,
-      },
-    ],
-    href: "https://anabaslabs.com",
-    image: "/banner.png",
-  },
+  // {
+  //   title: "Anabas Labs Website",
+  //   description:
+  //     "Our website has a modern design showcasing services, projects, and contact details, optimized for performance and SEO.",
+  //   dates: "Dec 2025 - Present",
+  //   contributors: ["Anabas Labs Team"],
+  //   tags: [
+  //     "TypeScript",
+  //     "Next.js",
+  //     "Tailwind CSS",
+  //     "shadcn/ui",
+  //     "GSAP",
+  //     "Framer Motion",
+  //     "Three.js",
+  //     "Vercel",
+  //   ],
+  //   links: [
+  //     {
+  //       type: "Website",
+  //       href: "https://anabaslabs.com",
+  //       icon: <IconWorld size={18} />,
+  //     },
+  //     {
+  //       type: "GitHub",
+  //       href: "https://github.com/anabaslabs/website",
+  //       icon: <IconBrandGithub size={18} />,
+  //     },
+  //   ],
+  //   href: "https://anabaslabs.com",
+  //   image: "/banner.png",
+  // },
   {
     title: "Arkiv",
     description:
@@ -96,6 +96,38 @@ export const projects: ProjectCardProps[] = [
     ],
     href: "https://github.com/saptarshiroy39/Luna-AI",
     image: "/projects/Luna-AI.png",
+  },
+  {
+    title: "Cipher",
+    description:
+      "Your all-in-one toolkit for Cipher Project. Encrypt, Decrypt, Run Frequency Analysis Attack and Generate Report with ease.",
+    dates: "Feb 2026 - Mar 2026",
+    contributors: ["Saptarshi", "Krishnendu"],
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Motion",
+      "Python",
+      "FastAPI",
+      "Turborepo",
+      "Vercel",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://cipher.anabaslabs.com",
+        icon: <IconWorld size={18} />,
+      },
+      {
+        type: "GitHub",
+        href: "https://github.com/anabaslabs/cipher",
+        icon: <IconBrandGithub size={18} />,
+      },
+    ],
+    href: "https://cipher.anabaslabs.com",
+    image: "/projects/Cipher.png",
   },
   {
     title: "Docker Storage Migration Tool",
