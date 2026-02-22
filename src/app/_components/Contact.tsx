@@ -297,6 +297,7 @@ export default function Contact() {
                   <a
                     key={item.label}
                     href={item.href}
+                    rel="noopener noreferrer"
                     className="flex items-start gap-4 group transition hover:translate-x-1"
                   >
                     <div className="p-3 sm:p-4 bg-secondary rounded-xl group-hover:bg-primary group-hover:text-primary-foreground transition">
@@ -326,6 +327,7 @@ export default function Contact() {
                     key={social.name}
                     href={social.href}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className={`p-3 sm:p-4 bg-secondary rounded-xl transition
                       hover:scale-110 hover:shadow-lg ${social.color}`}
                   >

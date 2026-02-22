@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CometCard } from "@/components/ui/comet-card";
 import { Highlighter } from "@/components/ui/highlighter";
-import { IconBrandGithub, IconBrandX } from "@tabler/icons-react";
+import { IconWorld, IconBrandGithub, IconBrandX } from "@tabler/icons-react";
 import { teamMembers } from "@/data/team";
 
 export default function AboutTeam() {
@@ -52,10 +52,21 @@ export default function AboutTeam() {
               </div>
 
               <div className="w-full my-3 h-5 flex gap-5 justify-center items-center">
-                <Link href={member.github} target="_blank">
+                <Link
+                  href={member.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconWorld size={22} />
+                </Link>
+                <Link
+                  href={member.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <IconBrandGithub size={22} />
                 </Link>
-                <Link href={member.x} target="_blank">
+                <Link href={member.x} target="_blank" rel="noopener noreferrer">
                   <IconBrandX size={22} />
                 </Link>
               </div>
