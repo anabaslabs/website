@@ -5,15 +5,15 @@ import kdphoto from "@/assets/kd.jpeg";
 import srphoto from "@/assets/sr.jpeg";
 
 export const teamMembers = [
-  {
-    name: "Tuhin Pramanik",
-    email: "tuhin@anabaslabs.com",
-    role: "Full-Stack | Agents",
-    image: tpphoto,
-    website: "https://hituhin.in",
-    github: "https://github.com/tuhinpramanik4",
-    x: "https://x.com/TuhinPramanik01",
-  },
+  // {
+  //   name: "Tuhin Pramanik",
+  //   email: "tuhin@anabaslabs.com",
+  //   role: "Full-Stack | Agents",
+  //   image: tpphoto,
+  //   website: "https://hituhin.in",
+  //   github: "https://github.com/tuhinpramanik4",
+  //   x: "https://x.com/TuhinPramanik01",
+  // },
   {
     name: "Krishnendu Das",
     email: "krishnendu@anabaslabs.com",
