@@ -42,35 +42,30 @@ export default function Contact() {
 
   useEffect(() => {
     if (state.message) {
-      if (state.success) {
-        setButtonStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-        setClientErrors({});
-      } else {
-        setButtonStatus("error");
-      }
-
       if (statusTimeoutRef.current) {
         clearTimeout(statusTimeoutRef.current);
       }
+
+      const syncTimeout = setTimeout(() => {
+        setButtonStatus(state.success ? "success" : "error");
+        if (state.success) {
+          setFormData({ name: "", email: "", message: "" });
+          setClientErrors({});
+        }
+      }, 0);
 
       statusTimeoutRef.current = setTimeout(() => {
         setButtonStatus("idle");
       }, 3000);
-    }
 
-    return () => {
-      if (statusTimeoutRef.current) {
-        clearTimeout(statusTimeoutRef.current);
-      }
-    };
-  }, [state]);
-
-  useEffect(() => {
-    if (isPending) {
-      setButtonStatus("loading");
+      return () => {
+        clearTimeout(syncTimeout);
+        if (statusTimeoutRef.current) {
+          clearTimeout(statusTimeoutRef.current);
+        }
+      };
     }
-  }, [isPending]);
+  }, [state.message, state.success]);
 
   const validateField = (name: string, value: string) => {
     const fieldSchema =
@@ -127,7 +122,7 @@ export default function Contact() {
             </Highlighter>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
-            Let's start a conversation. We're here to help.
+            Let&apos;s start a conversation. We&apos;re here to help.
           </p>
         </div>
 
@@ -254,7 +249,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  disabled={buttonStatus === "loading"}
+                  disabled={isPending}
                   className={`mt-6 px-6 py-3 rounded-full text-sm sm:text-base font-semibold transition cursor-pointer disabled:cursor-not-allowed flex items-center justify-center gap-2 min-w-45 ${
                     buttonStatus === "success"
                       ? "bg-green-500 text-white hover:bg-green-600"
@@ -263,7 +258,7 @@ export default function Contact() {
                         : "bg-primary text-primary-foreground hover:scale-[1.03] hover:shadow-lg hover:shadow-primary/40 disabled:opacity-50 disabled:hover:scale-100 disabled:hover:shadow-none"
                   }`}
                 >
-                  {buttonStatus === "loading" ? (
+                  {isPending ? (
                     <>
                       <IconLoader2 className="w-5 h-5 animate-spin" />
                       Sending...

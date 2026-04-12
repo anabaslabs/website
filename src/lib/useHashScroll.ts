@@ -8,7 +8,12 @@ export interface SectionConfig {
 }
 
 export function useHashScroll(sections: SectionConfig[]) {
-  const [activeHash, setActiveHash] = useState<string>("");
+  const [activeHash, setActiveHash] = useState<string>(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      return window.location.hash;
+    }
+    return sections[0]?.hash ?? "";
+  });
   const isScrollingRef = useRef(false);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const activeHashRef = useRef(activeHash);
@@ -55,10 +60,8 @@ export function useHashScroll(sections: SectionConfig[]) {
         scrollToHash(hash, false);
       }, 100);
       return () => clearTimeout(timer);
-    } else {
-      setActiveHash(sections[0]?.hash ?? "");
     }
-  }, []);
+  }, [scrollToHash]);
 
   useEffect(() => {
     const handlePopState = () => {
