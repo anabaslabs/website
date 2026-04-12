@@ -1,12 +1,12 @@
 import AboutTechStack from "./AboutTechStack";
 import AboutText from "./AboutText";
-import AboutTeam from "./AboutTeam";
+// import AboutTeam from "./AboutTeam";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col justify-start items-center min-h-screen w-full overflow-x-hidden"
+      className="flex flex-col justify-start items-center pb-10 w-full overflow-x-hidden"
     >
       <div className="w-full max-w-full overflow-hidden flex justify-center">
         <AboutText />
@@ -16,9 +16,9 @@ export default function About() {
         <AboutTechStack />
       </div>
 
-      <div className="w-full">
+      {/* <div className="w-full">
         <AboutTeam />
-      </div>
+      </div> */}
     </section>
   );
 }

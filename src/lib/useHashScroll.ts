@@ -8,15 +8,19 @@ export interface SectionConfig {
 }
 
 export function useHashScroll(sections: SectionConfig[]) {
-  const [activeHash, setActiveHash] = useState<string>(() => {
-    if (typeof window !== "undefined" && window.location.hash) {
-      return window.location.hash;
-    }
-    return sections[0]?.hash ?? "";
-  });
+  const [activeHash, setActiveHash] = useState<string>("");
   const isScrollingRef = useRef(false);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const activeHashRef = useRef(activeHash);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      setActiveHash(hash);
+    } else if (sections.length > 0) {
+      setActiveHash(sections[0].hash);
+    }
+  }, [sections]);
 
   useEffect(() => {
     activeHashRef.current = activeHash;
