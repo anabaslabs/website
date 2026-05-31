@@ -149,21 +149,25 @@ export const projects: ProjectCardProps[] = [
     title: "Ranno",
     description:
       "A Python library that converts natural language into executable code & executes them for instant data processing & analysis.",
-    dates: "Apr 2026 - Present",
+    dates: "Apr 2026 - May 2026",
     contributors: ["Saptarshi"],
     tags: [
       "Python",
       "Magika",
-      "Numpy",
       "Pandas",
-      "Matplotlib",
-      "Seaborn",
-      "FastAPI",
       "Gemini API",
+      "FastAPI",
+      "Hugging Face",
+      "Next.js",
       "Vercel",
       "PyPI",
     ],
     links: [
+      {
+        type: "Website",
+        href: "https://ranno.hirishi.in",
+        icon: <IconWorld size={18} />,
+      },
       {
         type: "PyPI Package",
         href: "https://pypi.org/project/ranno",
@@ -175,7 +179,7 @@ export const projects: ProjectCardProps[] = [
         icon: <IconBrandGithub size={18} />,
       },
     ],
-    href: "https://pypi.org/project/ranno",
+    href: "https://ranno.hirishi.in",
     image: "/projects/Ranno.png",
   },
   {
