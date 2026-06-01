@@ -39,7 +39,7 @@ export default function NavBar() {
         hoveredPillTextColor="#ec4e0c"
         pillTextColor="#000000"
         initialLoadAnimation={false}
-        className="font-lexend font-medium opacity-95"
+        className="font-ysabeau-infant font-medium opacity-95"
       />
     </nav>
   );

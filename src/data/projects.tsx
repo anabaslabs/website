@@ -47,19 +47,23 @@ export const projects: ProjectCardProps[] = [
     dates: "May 2026 - June, 2026",
     contributors: ["Saptarshi", "Krishnendu"],
     tags: [
+      // Backend
+      "Python",
+      "FastAPI",
+      "LangChain",
+      "Gemini API",
+      // Frontend
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
       "shadcn/ui",
       "remark",
       "KaTeX",
-      "Vercel",
-      "Python",
-      "LangChain",
+      // Database
       "Pinecone",
-      "Gemini API",
-      "FastAPI",
+      // Deploy
       "HuggingFace",
+      "Vercel",
     ],
     links: [
       {
@@ -83,13 +87,16 @@ export const projects: ProjectCardProps[] = [
     dates: "Feb 2026 - Mar 2026",
     contributors: ["Saptarshi", "Krishnendu"],
     tags: [
+      // Backend
+      "Python",
+      "FastAPI",
+      // Frontend
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
       "shadcn/ui",
       "Motion",
-      "Python",
-      "FastAPI",
+      // Deploy
       "Turborepo",
       "Vercel",
     ],
@@ -115,18 +122,22 @@ export const projects: ProjectCardProps[] = [
     dates: "Feb 2026 - Present",
     contributors: ["Krishnendu"],
     tags: [
+      // Backend
+      "Python",
+      "Pillow",
+      "Rembg",
+      "Better Auth",
+      "Prisma",
+      "UploadThing",
+      // Frontend
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
       "shadcn/ui",
-      "Better Auth",
-      "Prisma",
+      // Database
       "PostgreSQL",
       "Redis",
-      "UploadThing",
-      "Python",
-      "Pillow",
-      "Rembg",
+      // Deploy
       "Docker",
       "Turborepo",
     ],
@@ -152,13 +163,18 @@ export const projects: ProjectCardProps[] = [
     dates: "Apr 2026 - May 2026",
     contributors: ["Saptarshi"],
     tags: [
+      // Backend
       "Python",
-      "Magika",
-      "Pandas",
-      "Gemini API",
       "FastAPI",
-      "Hugging Face",
+      "Pandas",
+      "Magika",
+      "Gemini API",
+      // Frontend
+      "TypeScript",
       "Next.js",
+      "shadcn/ui",
+      // Deploy
+      "Hugging Face",
       "Vercel",
       "PyPI",
     ],
@@ -189,13 +205,15 @@ export const projects: ProjectCardProps[] = [
     dates: "Apr 2025 - Dec 2025",
     contributors: ["Krishnendu"],
     tags: [
-      "TypeScript",
+      // Backend
       "Node.js",
       "Commander.js",
+      "Docker Engine API",
+      // Frontend
+      "TypeScript",
+      "Axios",
       "chalk",
       "ora",
-      "Axios",
-      "Docker Engine API",
     ],
     links: [
       {
@@ -219,16 +237,19 @@ export const projects: ProjectCardProps[] = [
     dates: "Oct 2025 - Dec 2025",
     contributors: ["Saptarshi"],
     tags: [
-      "n8n",
+      // Backend
       "Gemini API",
+      "Veo 3.1",
+      "Nano Banana",
+      // Frontend
       "GitHub API",
       "Translate API",
       "YouTube API",
       "OpenWeatherMap",
       "SerpAPI",
-      "Nano Banana",
-      "Veo 3.1",
       "VoiceRSS",
+      // Deploy
+      "n8n",
     ],
     links: [
       {

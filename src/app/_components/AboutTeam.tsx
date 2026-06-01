@@ -10,7 +10,7 @@ import { teamMembers } from "@/data/team";
 export default function AboutTeam() {
   return (
     <>
-      <div className="text-center text-xl md:text-2xl font-bold mt-14 tracking-tight">
+      <div className="text-center text-2xl md:text-3xl font-bold mt-14 tracking-tight text-black dark:text-white">
         <Highlighter
           action="box"
           color="#ec4e0c"
@@ -45,10 +45,10 @@ export default function AboutTeam() {
                 </div>
               </div>
 
-              <div className="mt-2 flex flex-col items-center p-2 font-mono text-black">
-                <div className="text-md">{member.name}</div>
-                <div className="text-xs opacity-50">({member.email})</div>
-                <div className="text-sm opacity-80">{member.role}</div>
+              <div className="mt-2 flex flex-col items-center p-2 font-mono text-black dark:text-white">
+                <div className="text-lg font-bold">{member.name}</div>
+                <div className="text-sm opacity-60">({member.email})</div>
+                <div className="text-base opacity-90">{member.role}</div>
               </div>
 
               <div className="w-full my-3 h-5 flex gap-5 justify-center items-center">

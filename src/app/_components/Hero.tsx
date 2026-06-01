@@ -52,10 +52,10 @@ export default function Hero() {
       </div>
 
       <div className="relative text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-        <div className="flex justify-center items-center gap-3 font-lexend text-3xl md:text-5xl mb-6 text-foreground font-semibold">
+        <div className="flex justify-center items-center gap-3 font-ysabeau-infant text-4xl md:text-6xl mb-6 text-foreground font-semibold">
           <p>Empowering modern enterprises with scalable software solutions.</p>
         </div>
-        <div className="flex justify-center items-center gap-3 font-lexend text-2xl md:text-4xl mb-6 text-foreground font-semibold">
+        <div className="flex justify-center items-center gap-3 font-ysabeau-infant text-3xl md:text-5xl mb-6 text-foreground font-semibold">
           <h1>We Build</h1>
           <WordRotate
             words={[
@@ -69,12 +69,12 @@ export default function Hero() {
             className="text-primary pr-2"
           />
         </div>
-        <h2 className="font-lora text-2xl md:text-3xl mb-8 text-muted-foreground font-semibold">
+        <h2 className="font-lora text-3xl md:text-4xl mb-8 text-muted-foreground font-semibold">
           Your Vision, Built with Precision.
         </h2>
         <div className="flex flex-col sm:flex-row justify-center items-center mx-auto gap-4 sm:gap-14">
           <ShinyButton
-            className="bg-secondary hover:bg-accent px-8 py-2 rounded-full"
+            className="bg-secondary hover:bg-accent px-8 py-2 rounded-full font-ysabeau-infant text-lg md:text-xl"
             onClick={(e) => {
               handleNavClick("#about", e);
             }}
@@ -82,7 +82,7 @@ export default function Hero() {
             Learn More
           </ShinyButton>
           <InteractiveHoverButton
-            className="bg-secondary"
+            className="bg-secondary font-ysabeau-infant text-lg md:text-xl"
             onClick={(e) => {
               handleNavClick("#contact", e);
             }}

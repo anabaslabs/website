@@ -113,7 +113,7 @@ export function ProjectCard({
       <div className="p-6 flex flex-col gap-3 flex-1">
         <div className="flex items-start justify-between gap-2">
           <div className="flex flex-col gap-2">
-            <h3 className="font-semibold text-lg">{title}</h3>
+            <h3 className="font-bold text-xl text-black dark:text-white">{title}</h3>
             <time className="flex items-center gap-1 text-xs text-muted-foreground">
               <IconCalendarTime
                 className="inline-block size-3.5 mr-1"
@@ -136,7 +136,7 @@ export function ProjectCard({
             <IconArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
-        <div className="text-sm flex-1 prose max-w-full text-pretty leading-relaxed text-muted-foreground dark:prose-invert">
+        <div className="text-sm flex-1 prose max-w-full text-pretty leading-relaxed text-black dark:text-white dark:prose-invert">
           <p>{description}</p>
         </div>
         {tags && tags.length > 0 && (
@@ -144,7 +144,7 @@ export function ProjectCard({
             {tags.map((tag) => (
               <Badge
                 key={tag}
-                className="text-[11px] font-medium border border-border h-6 w-fit px-2"
+                className="text-[11px] font-medium border border-border h-6 w-fit px-2 font-lexend"
                 variant="outline"
               >
                 {tag}

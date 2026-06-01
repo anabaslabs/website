@@ -108,7 +108,7 @@ export default function Contact() {
       id="contact"
       className="bg-background py-10 px-4 sm:px-6 md:px-12 w-full"
     >
-      <div className="max-w-6xl mx-auto font-lexend mt-4">
+      <div className="max-w-6xl mx-auto font-ysabeau-infant mt-4">
         <div className="text-center mb-8 md:mb-10 ">
           <h1 className="text-center text-3xl md:text-4xl font-bold mb-2 md:mb-3 tracking-tight">
             <Highlighter
@@ -121,7 +121,7 @@ export default function Contact() {
               Contact
             </Highlighter>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
+          <p className="text-lg sm:text-xl md:text-2xl text-black dark:text-white">
             Let&apos;s start a conversation. We&apos;re here to help.
           </p>
         </div>

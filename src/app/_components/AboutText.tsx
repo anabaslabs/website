@@ -4,7 +4,7 @@ import { Highlighter } from "@/components/ui/highlighter";
 
 export default function AboutText() {
   return (
-    <div className="w-full font-lexend text-[32px] flex flex-col justify-start items-center mt-2 bg-linear-to-b from-transparent to-muted/10">
+    <div className="w-full font-ysabeau-infant text-[32px] flex flex-col justify-start items-center mt-2 bg-linear-to-b from-transparent to-muted/10">
       <div className="p-12">
         <div className="text-center text-3xl md:text-4xl font-bold mb-2 md:mb-3 tracking-tight">
           <Highlighter
@@ -18,25 +18,25 @@ export default function AboutText() {
           </Highlighter>
         </div>
 
-        <div className="font-normal text-lg md:text-xl max-w-6xl leading-relaxed tracking-wide">
+        <div className="font-normal text-xl md:text-2xl max-w-6xl leading-relaxed tracking-wide text-black dark:text-white">
           Anabas Labs is a software engineering studio dedicated to building
           scalable, real-world systems for startups and enterprises. We
           specialize in designing robust{" "}
           <Highlighter action="highlight" color="#FFC4C4" isView={true}>
-            web platforms
+            <span className="font-bold">web platforms</span>
           </Highlighter>
           , intuitive{" "}
           <Highlighter action="highlight" color="#E8D5B5" isView={true}>
-            mobile applications
+            <span className="font-bold">mobile applications</span>
           </Highlighter>
           , and streamlined{" "}
           <Highlighter action="highlight" color="#C4D9FF" isView={true}>
-            DevOps infrastructure
+            <span className="font-bold">DevOps infrastructure</span>
           </Highlighter>{" "}
           that ensures your product performs consistently. Beyond standard
           development, we integrate{" "}
           <Highlighter action="highlight" color="#86EFAC" isView={true}>
-            AI-driven automation
+            <span className="font-bold">AI-driven automation</span>
           </Highlighter>{" "}
           to optimize workflows and future-proof your operations. Our approach
           combines deep technical expertise with a focus on long-term
