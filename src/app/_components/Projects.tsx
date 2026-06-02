@@ -8,7 +8,7 @@ export default function Projects() {
       id="projects"
       className="bg-background py-10 px-4 sm:px-6 md:px-12"
     >
-      <div className="max-w-6xl mx-auto font-lexend mt-4">
+      <div className="max-w-6xl mx-auto font-ysabeau-infant mt-4">
         <div className="text-center mb-8 md:mb-10 ">
           <h1 className="text-center text-3xl md:text-4xl font-bold mb-2 md:mb-3 tracking-tight">
             <Highlighter
@@ -21,7 +21,7 @@ export default function Projects() {
               Projects
             </Highlighter>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
+          <p className="text-lg sm:text-xl md:text-2xl text-black dark:text-white">
             Check out some of our recent work and case studies showcasing our
             expertise in building scalable, real-world systems for startups and
             enterprises.
@@ -41,7 +41,7 @@ export default function Projects() {
               image={project.image}
               links={project.links}
               video={project.video}
-              className="font-lexend"
+              className="font-ysabeau-infant"
             />
           ))}
         </div>

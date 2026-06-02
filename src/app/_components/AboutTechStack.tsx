@@ -7,7 +7,7 @@ import { techLogos } from "@/data/tech-stack";
 export default function AboutTechStack() {
   return (
     <>
-      <div className="text-center text-xl md:text-2xl font-bold mb-4 md:mb-6 mt-2 tracking-tight">
+      <div className="text-center text-2xl md:text-3xl font-bold mb-4 md:mb-6 mt-2 tracking-tight text-black dark:text-white">
         <Highlighter
           action="box"
           color="#ec4e0c"
