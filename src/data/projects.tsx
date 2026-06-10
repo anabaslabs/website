@@ -8,6 +8,60 @@ import {
   IconWorld,
 } from "@tabler/icons-react";
 
+export const freelanceProjects: ProjectCardProps[] = [
+  {
+    title: "The House of Events",
+    description:
+      "Connecting Brands With The Right Creators. We help brands grow through strategic influencer collaborations across nightlife, fashion, beauty, lifestyle, and corporate campaigns.",
+    dates: "May 2026 - June 2026",
+    contributors: ["Anabas Labs Team"],
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Zod",
+      "Google APIs",
+      "Vercel",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://thehouseofevents.in",
+        icon: <IconWorld size={18} />,
+      },
+    ],
+    href: "https://thehouseofevents.in",
+    image: "/projects/TheHouseOfEvents.png",
+  },
+  {
+    title: "Innvent Media",
+    description:
+      "Amplify Your Brand Across Every Channel. Full-Service Marketing Agency - WhatsApp, SMS, RCS, IVR, OOH, Transit Media, Celebrity Endorsement & More.",
+    dates: "Mar 2026 - Apr 2026",
+    contributors: ["Anabas Labs Team"],
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Motion",
+      "Zod",
+      "Google APIs",
+      "Vercel",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://innventmedia.in",
+        icon: <IconWorld size={18} />,
+      },
+    ],
+    href: "https://innventmedia.in",
+    image: "/projects/InnventMedia.png",
+  },
+];
+
 export const otherProjectsOss: ProjectCardProps[] = [
   // {
   //   title: "Anabas Labs Website",
