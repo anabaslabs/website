@@ -8,7 +8,7 @@ import {
   IconWorld,
 } from "@tabler/icons-react";
 
-export const projects: ProjectCardProps[] = [
+export const otherProjectsOss: ProjectCardProps[] = [
   // {
   //   title: "Anabas Labs Website",
   //   description:
