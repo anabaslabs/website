@@ -3,7 +3,7 @@ import {
   // IconBrandFigma,
   IconBrandGithub,
   IconBrandPython,
-  // IconBrandVscode,
+  IconBrandVscode,
   IconPackage,
   IconWorld,
 } from "@tabler/icons-react";
@@ -236,6 +236,72 @@ export const otherProjectsOss: ProjectCardProps[] = [
     image: "/projects/NoBG.png",
   },
   {
+    title: "GitID",
+    description:
+      "A lightweight all-in-one VS Code extension designed to simplify handling multiple Git profiles on the same machine.",
+    dates: "May 2026 - Jun 2026",
+    contributors: ["Krishnendu"],
+    tags: [
+      "Typescript",
+      "Node.js",
+      "Visual Studio Code Extension API",
+      "Visual Studio Marketplace",
+      "Open VSX Registry",
+    ],
+    links: [
+      {
+        type: "Open VSX",
+        href: "https://open-vsx.org/extension/itskdhere/gitid",
+        icon: <IconBrandVscode size={18} />,
+      },
+      {
+        type: "VSC Marketplace",
+        href: "https://marketplace.visualstudio.com/items?itemName=itskdhere.gitid",
+        icon: <IconBrandVscode size={18} />,
+      },
+      {
+        type: "GitHub",
+        href: "https://github.com/itskdhere/vscode-gitid",
+        icon: <IconBrandGithub size={18} />,
+      },
+    ],
+    href: "https://marketplace.visualstudio.com/items?itemName=itskdhere.gitid",
+    image: "/projects/GitID.png",
+  },
+  {
+    title: "Portyard",
+    description:
+      "A VS Code extension to discover active local ports, manage running processes & forward them directly from the Activity Bar.",
+    dates: "May 2026 - Jun 2026",
+    contributors: ["Saptarshi"],
+    tags: [
+      "Typescript",
+      "Node.js",
+      "Visual Studio Code Extension API",
+      "Visual Studio Marketplace",
+      "Open VSX Registry",
+    ],
+    links: [
+      {
+        type: "Open VSX",
+        href: "https://open-vsx.org/extension/saptarshiroy39/portyard",
+        icon: <IconBrandVscode size={18} />,
+      },
+      {
+        type: "VSC Marketplace",
+        href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.portyard",
+        icon: <IconBrandVscode size={18} />,
+      },
+      {
+        type: "GitHub",
+        href: "https://github.com/saptarshiroy39/portyard",
+        icon: <IconBrandGithub size={18} />,
+      },
+    ],
+    href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.portyard",
+    image: "/projects/Portyard.png",
+  },
+  {
     title: "Ranno",
     description:
       "A Python library that converts natural language into executable code & executes them for instant data processing & analysis.",
@@ -276,6 +342,28 @@ export const otherProjectsOss: ProjectCardProps[] = [
     ],
     href: "https://ranno.hirishi.in",
     image: "/projects/Ranno.png",
+  },
+  {
+    title: "Sizelib",
+    description:
+      "A lightweight, type-safe Python library for working with & humanizing file sizes with clean, type-preserving helpers.",
+    dates: "Jun 2026 - Jul 2026",
+    contributors: ["Saptarshi"],
+    tags: ["Python", "Pytest", "Ruff", "Setuptools", "PyPI"],
+    links: [
+      {
+        type: "PyPI Package",
+        href: "https://pypi.org/project/sizelib",
+        icon: <IconBrandPython size={18} />,
+      },
+      {
+        type: "GitHub",
+        href: "https://github.com/saptarshiroy39/sizelib",
+        icon: <IconBrandGithub size={18} />,
+      },
+    ],
+    href: "https://pypi.org/project/sizelib",
+    image: "/projects/Sizelib.png",
   },
   {
     title: "Docker Storage Migration Tool",
