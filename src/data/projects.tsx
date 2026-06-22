@@ -201,22 +201,18 @@ export const otherProjectsOss: ProjectCardProps[] = [
     dates: "Feb 2026 - Present",
     contributors: ["Krishnendu"],
     tags: [
-      // Backend
-      "Python",
-      "Pillow",
-      "Rembg",
-      "Better Auth",
-      "Prisma",
-      "UploadThing",
-      // Frontend
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
       "shadcn/ui",
-      // Database
+      "Better Auth",
+      "Prisma",
       "PostgreSQL",
       "Redis",
-      // Deploy
+      "UploadThing",
+      "Python",
+      "Pillow",
+      "Rembg",
       "Docker",
       "Turborepo",
     ],
@@ -372,15 +368,14 @@ export const otherProjectsOss: ProjectCardProps[] = [
     dates: "Apr 2025 - Dec 2025",
     contributors: ["Krishnendu"],
     tags: [
-      // Backend
-      "Node.js",
-      "Commander.js",
-      "Docker Engine API",
-      // Frontend
       "TypeScript",
-      "Axios",
+      "Bun",
+      "Commander.js",
       "chalk",
       "ora",
+      "Axios",
+      "Docker Engine API",
+      "Turborepo",
     ],
     links: [
       {
