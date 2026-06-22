@@ -10,6 +10,31 @@ import {
 
 export const freelanceProjects: ProjectCardProps[] = [
   {
+    title: "Ed-Tech",
+    description:
+      "A premium EdTech platform featuring dynamic course catalogs, instructor profiles, student portals, and a custom CMS admin control dashboard.",
+    dates: "June 2026 - July 2026",
+    contributors: ["Anabas Labs Team"],
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Zod",
+      "Supabase",
+      "Vercel",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://ed-tech-sr.vercel.app",
+        icon: <IconWorld size={18} />,
+      },
+    ],
+    href: "https://ed-tech-sr.vercel.app",
+    image: "/projects/Ed-Tech.png",
+  },
+  {
     title: "The House of Events",
     description:
       "Connecting Brands With The Right Creators. We help brands grow through strategic influencer collaborations across nightlife, fashion, beauty, lifestyle, and corporate campaigns.",
