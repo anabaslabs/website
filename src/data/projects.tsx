@@ -3,12 +3,91 @@ import {
   // IconBrandFigma,
   IconBrandGithub,
   IconBrandPython,
-  // IconBrandVscode,
+  IconBrandVscode,
   IconPackage,
   IconWorld,
 } from "@tabler/icons-react";
 
-export const projects: ProjectCardProps[] = [
+export const freelanceProjects: ProjectCardProps[] = [
+  {
+    title: "Ed-Tech",
+    description:
+      "A premium EdTech platform featuring dynamic course catalogs, instructor profiles, student portals, and a custom CMS admin control dashboard.",
+    dates: "June 2026 - July 2026",
+    contributors: ["Anabas Labs Team"],
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Zod",
+      "Supabase",
+      "Vercel",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://ed-tech-sr.vercel.app",
+        icon: <IconWorld size={18} />,
+      },
+    ],
+    href: "https://ed-tech-sr.vercel.app",
+    image: "/projects/Ed-Tech.png",
+  },
+  {
+    title: "The House of Events",
+    description:
+      "Connecting Brands With The Right Creators. We help brands grow through strategic influencer collaborations across nightlife, fashion, beauty, lifestyle, and corporate campaigns.",
+    dates: "May 2026 - June 2026",
+    contributors: ["Anabas Labs Team"],
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Zod",
+      "Google APIs",
+      "Vercel",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://thehouseofevents.in",
+        icon: <IconWorld size={18} />,
+      },
+    ],
+    href: "https://thehouseofevents.in",
+    image: "/projects/TheHouseOfEvents.png",
+  },
+  {
+    title: "Innvent Media",
+    description:
+      "Amplify Your Brand Across Every Channel. Full-Service Marketing Agency - WhatsApp, SMS, RCS, IVR, OOH, Transit Media, Celebrity Endorsement & More.",
+    dates: "Mar 2026 - Apr 2026",
+    contributors: ["Anabas Labs Team"],
+    tags: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Motion",
+      "Zod",
+      "Google APIs",
+      "Vercel",
+    ],
+    links: [
+      {
+        type: "Website",
+        href: "https://innventmedia.in",
+        icon: <IconWorld size={18} />,
+      },
+    ],
+    href: "https://innventmedia.in",
+    image: "/projects/InnventMedia.png",
+  },
+];
+
+export const otherProjectsOss: ProjectCardProps[] = [
   // {
   //   title: "Anabas Labs Website",
   //   description:
@@ -122,22 +201,18 @@ export const projects: ProjectCardProps[] = [
     dates: "Feb 2026 - Present",
     contributors: ["Krishnendu"],
     tags: [
-      // Backend
-      "Python",
-      "Pillow",
-      "Rembg",
-      "Better Auth",
-      "Prisma",
-      "UploadThing",
-      // Frontend
       "TypeScript",
       "Next.js",
       "Tailwind CSS",
       "shadcn/ui",
-      // Database
+      "Better Auth",
+      "Prisma",
       "PostgreSQL",
       "Redis",
-      // Deploy
+      "UploadThing",
+      "Python",
+      "Pillow",
+      "Rembg",
       "Docker",
       "Turborepo",
     ],
@@ -155,6 +230,72 @@ export const projects: ProjectCardProps[] = [
     ],
     href: "https://nobg.itskdhere.com",
     image: "/projects/NoBG.png",
+  },
+  {
+    title: "GitID",
+    description:
+      "A lightweight all-in-one VS Code extension designed to simplify handling multiple Git profiles on the same machine.",
+    dates: "May 2026 - Jun 2026",
+    contributors: ["Krishnendu"],
+    tags: [
+      "Typescript",
+      "Node.js",
+      "Visual Studio Code Extension API",
+      "Visual Studio Marketplace",
+      "Open VSX Registry",
+    ],
+    links: [
+      {
+        type: "Open VSX",
+        href: "https://open-vsx.org/extension/itskdhere/gitid",
+        icon: <IconBrandVscode size={18} />,
+      },
+      {
+        type: "VSC Marketplace",
+        href: "https://marketplace.visualstudio.com/items?itemName=itskdhere.gitid",
+        icon: <IconBrandVscode size={18} />,
+      },
+      {
+        type: "GitHub",
+        href: "https://github.com/itskdhere/vscode-gitid",
+        icon: <IconBrandGithub size={18} />,
+      },
+    ],
+    href: "https://marketplace.visualstudio.com/items?itemName=itskdhere.gitid",
+    image: "/projects/GitID.png",
+  },
+  {
+    title: "Portyard",
+    description:
+      "A VS Code extension to discover active local ports, manage running processes & forward them directly from the Activity Bar.",
+    dates: "May 2026 - Jun 2026",
+    contributors: ["Saptarshi"],
+    tags: [
+      "Typescript",
+      "Node.js",
+      "Visual Studio Code Extension API",
+      "Visual Studio Marketplace",
+      "Open VSX Registry",
+    ],
+    links: [
+      {
+        type: "Open VSX",
+        href: "https://open-vsx.org/extension/saptarshiroy39/portyard",
+        icon: <IconBrandVscode size={18} />,
+      },
+      {
+        type: "VSC Marketplace",
+        href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.portyard",
+        icon: <IconBrandVscode size={18} />,
+      },
+      {
+        type: "GitHub",
+        href: "https://github.com/saptarshiroy39/portyard",
+        icon: <IconBrandGithub size={18} />,
+      },
+    ],
+    href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.portyard",
+    image: "/projects/Portyard.png",
   },
   {
     title: "Ranno",
@@ -199,21 +340,42 @@ export const projects: ProjectCardProps[] = [
     image: "/projects/Ranno.png",
   },
   {
+    title: "Sizelib",
+    description:
+      "A lightweight, type-safe Python library for working with & humanizing file sizes with clean, type-preserving helpers.",
+    dates: "Jun 2026 - Jul 2026",
+    contributors: ["Saptarshi"],
+    tags: ["Python", "Pytest", "Ruff", "Setuptools", "PyPI"],
+    links: [
+      {
+        type: "PyPI Package",
+        href: "https://pypi.org/project/sizelib",
+        icon: <IconBrandPython size={18} />,
+      },
+      {
+        type: "GitHub",
+        href: "https://github.com/saptarshiroy39/sizelib",
+        icon: <IconBrandGithub size={18} />,
+      },
+    ],
+    href: "https://pypi.org/project/sizelib",
+    image: "/projects/Sizelib.png",
+  },
+  {
     title: "Docker Storage Migration Tool",
     description:
       "A command-line utility for seamlessly exporting and importing Docker volumes and bind mounts.",
     dates: "Apr 2025 - Dec 2025",
     contributors: ["Krishnendu"],
     tags: [
-      // Backend
-      "Node.js",
-      "Commander.js",
-      "Docker Engine API",
-      // Frontend
       "TypeScript",
-      "Axios",
+      "Bun",
+      "Commander.js",
       "chalk",
       "ora",
+      "Axios",
+      "Docker Engine API",
+      "Turborepo",
     ],
     links: [
       {
