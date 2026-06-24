@@ -15,10 +15,12 @@ export function useHashScroll(sections: SectionConfig[]) {
 
   useEffect(() => {
     const hash = window.location.hash;
-    if (hash) {
-      setActiveHash(hash);
-    } else if (sections.length > 0) {
-      setActiveHash(sections[0].hash);
+    const targetHash = hash || (sections[0]?.hash ?? "");
+    if (targetHash) {
+      const timer = setTimeout(() => {
+        setActiveHash(targetHash);
+      }, 0);
+      return () => clearTimeout(timer);
     }
   }, [sections]);
 
