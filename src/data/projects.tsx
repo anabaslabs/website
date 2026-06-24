@@ -6,6 +6,7 @@ import {
   IconBrandVscode,
   IconPackage,
   IconWorld,
+  IconBook,
 } from "@tabler/icons-react";
 
 export const freelanceProjects: ProjectCardProps[] = [
@@ -251,7 +252,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
         icon: <IconBrandVscode size={18} />,
       },
       {
-        type: "VSC Marketplace",
+        type: "Visual Studio Marketplace",
         href: "https://marketplace.visualstudio.com/items?itemName=itskdhere.gitid",
         icon: <IconBrandVscode size={18} />,
       },
@@ -284,7 +285,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
         icon: <IconBrandVscode size={18} />,
       },
       {
-        type: "VSC Marketplace",
+        type: "Visual Studio Marketplace",
         href: "https://marketplace.visualstudio.com/items?itemName=saptarshiroy39.portyard",
         icon: <IconBrandVscode size={18} />,
       },
@@ -310,6 +311,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
       "Pandas",
       "Magika",
       "Gemini API",
+      "Ruff",
       // Frontend
       "TypeScript",
       "Next.js",
@@ -321,9 +323,9 @@ export const otherProjectsOss: ProjectCardProps[] = [
     ],
     links: [
       {
-        type: "Website",
+        type: "Documentation",
         href: "https://ranno.hirishi.in",
-        icon: <IconWorld size={18} />,
+        icon: <IconBook size={18} />,
       },
       {
         type: "PyPI Package",
@@ -380,7 +382,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
     links: [
       {
         type: "NPM Package",
-        href: "https://github.com/itskdhere/dsmt",
+        href: "https://www.npmjs.com/package/dsmt",
         icon: <IconPackage size={18} />,
       },
       {
