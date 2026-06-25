@@ -125,7 +125,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
     description:
       "ARC (Augmented Retrieval Chatbot) is an AI-powered document assistant (RAG) that lets you upload files and have accurate context-aware conversations about their content.",
     dates: "May 2026 - June, 2026",
-    contributors: ["Saptarshi", "Krishnendu"],
+    contributors: ["Saptarshi Roy", "Krishnendu Das"],
     tags: [
       // Backend
       "Python",
@@ -165,7 +165,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
     description:
       "Your all-in-one toolkit for Cipher Project. Encrypt, Decrypt, Run Frequency Analysis Attack and Generate Report with ease.",
     dates: "Feb 2026 - Mar 2026",
-    contributors: ["Saptarshi", "Krishnendu"],
+    contributors: ["Saptarshi Roy", "Krishnendu Das"],
     tags: [
       // Backend
       "Python",
@@ -200,7 +200,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
     description:
       "An open-source, full-stack application designed to automatically remove backgrounds from images.",
     dates: "Feb 2026 - Present",
-    contributors: ["Krishnendu"],
+    contributors: ["Krishnendu Das"],
     tags: [
       "TypeScript",
       "Next.js",
@@ -237,7 +237,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
     description:
       "A lightweight all-in-one VS Code extension designed to simplify handling multiple Git profiles on the same machine.",
     dates: "May 2026 - Jun 2026",
-    contributors: ["Krishnendu"],
+    contributors: ["Krishnendu Das"],
     tags: [
       "Typescript",
       "Node.js",
@@ -270,7 +270,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
     description:
       "A VS Code extension to discover active local ports, manage running processes & forward them directly from the Activity Bar.",
     dates: "May 2026 - Jun 2026",
-    contributors: ["Saptarshi"],
+    contributors: ["Saptarshi Roy"],
     tags: [
       "Typescript",
       "Node.js",
@@ -303,7 +303,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
     description:
       "A Python library that converts natural language into executable code & executes them for instant data processing & analysis.",
     dates: "Apr 2026 - May 2026",
-    contributors: ["Saptarshi"],
+    contributors: ["Saptarshi Roy"],
     tags: [
       // Backend
       "Python",
@@ -346,7 +346,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
     description:
       "A lightweight, type-safe Python library for working with & humanizing file sizes with clean, type-preserving helpers.",
     dates: "Jun 2026 - Jul 2026",
-    contributors: ["Saptarshi"],
+    contributors: ["Saptarshi Roy"],
     tags: ["Python", "Pytest", "Ruff", "Setuptools", "PyPI"],
     links: [
       {
@@ -368,7 +368,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
     description:
       "A command-line utility for seamlessly exporting and importing Docker volumes and bind mounts.",
     dates: "Apr 2025 - Dec 2025",
-    contributors: ["Krishnendu"],
+    contributors: ["Krishnendu Das"],
     tags: [
       "TypeScript",
       "Bun",
@@ -399,7 +399,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
     description:
       "Luna AI is a multi-agent assistant that routes queries to specialized agents for research, coding, writing, and media generation through one unified interface.",
     dates: "Oct 2025 - Dec 2025",
-    contributors: ["Saptarshi"],
+    contributors: ["Saptarshi Roy"],
     tags: [
       // Backend
       "Gemini API",
@@ -430,7 +430,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
   //   description:
   //     "InnovateBank is a 75-year-old regional bank losing personal loan customers to digital banks and fintechs due to outdated processes and poor digital experiences.",
   //   dates: "Dec 2025 - Jan 2026",
-  //   contributors: ["Krishnendu", "Saptarshi"],
+  //   contributors: ["Krishnendu Das", "Saptarshi Roy"],
   //   tags: ["Figma", "UI/UX Design", "Prototyping"],
   //   links: [
   //     {
