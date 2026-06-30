@@ -381,6 +381,11 @@ export const otherProjectsOss: ProjectCardProps[] = [
     ],
     links: [
       {
+        type: "Website",
+        href: "https://dsmt.itskdhere.com",
+        icon: <IconWorld size={18} />,
+      },
+      {
         type: "NPM Package",
         href: "https://www.npmjs.com/package/dsmt",
         icon: <IconPackage size={18} />,
@@ -391,7 +396,7 @@ export const otherProjectsOss: ProjectCardProps[] = [
         icon: <IconBrandGithub size={18} />,
       },
     ],
-    href: "https://www.npmjs.com/package/dsmt",
+    href: "https://dsmt.itskdhere.com",
     image: "/projects/DSMT.png",
   },
   {
