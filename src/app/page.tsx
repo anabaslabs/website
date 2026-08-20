@@ -5,6 +5,7 @@ import Hero from "./_components/Hero";
 import About from "./_components/About";
 import Projects from "./_components/Projects";
 import Contact from "./_components/Contact";
+import { IconCopyright } from "@tabler/icons-react";
 
 export default function Home() {
   return (
@@ -25,10 +26,10 @@ export default function Home() {
           <Contact />
         </main>
         <footer>
-          <p className="font-ysabeau-infant w-full text-center py-4 text-sm text-gray-500">
-            &copy; 2025-
+          <p className="font-ysabeau-infant w-full flex items-center justify-center gap-1 py-4 text-sm text-gray-500">
+            <IconCopyright size={14} className="translate-y-[0.75px]" />
             <span suppressHydrationWarning>
-              {new Date().getFullYear()}
+              2025-{new Date().getFullYear()}
             </span>{" "}
             Anabas Labs. All rights reserved.
           </p>
